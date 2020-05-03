@@ -6,9 +6,10 @@ Page({
     autoplay: true,
     indicatorDots: true,
     indicatorActiveColor: "#FFF",
-    circular:true,
-    interval:"4000",
-    duration:"1000",
+    indicatorColor: "rbga(251,255,242)",
+    circular: true,
+    interval: "4000",
+    duration: "1000",
     mode: 'aspectFill',
     list: [
       "../../images/DeltaJunction_ZH-CN9901755694_1920x1080.jpg",
@@ -17,6 +18,39 @@ Page({
       "../../images/HallwylfjelletSunset_ZH-CN9300910376_1920x1080.jpg",
       "../../images/midmoon_ZH-CN4973736313_1920x1080.jpg",
       "../../images/DeltaJunction_ZH-CN9901755694_1920x1080.jpg",
+    ],
+    icon_list: [{
+        img: "../../images/hot.png",
+        text: "hot"
+      },
+      {
+        img: "../../images/hot.png",
+        text: "hot"
+      },
+      {
+        img: "../../images/hot.png",
+        text: "hot"
+      },
+      {
+        img: "../../images/hot.png",
+        text: "hot"
+      },
+      {
+        img: "../../images/hot.png",
+        text: "hot"
+      },
+      {
+        img: "../../images/hot.png",
+        text: "hot"
+      }, {
+        img: "../../images/hot.png",
+        text: "hot"
+      },
+      {
+        img: "../../images/hot.png",
+        text: "hot"
+      },
+
     ]
   },
 

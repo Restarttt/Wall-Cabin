@@ -1,7 +1,14 @@
 /**index.wxss**/
+/* top大图 */
+.top-pic {
+  width: 100%;
+  padding: 15px 26px;
+}
+
 swiper-item {
   width: 100%;
   height: 100%;
+  margin: 0 auto;
 }
 
 .logo {
@@ -12,5 +19,42 @@ swiper-item {
 .logo image {
   height: 100%;
   border-radius: 20rpx;
-  margin: 0  auto;
+  margin: 0 auto;
+}
+
+/*icon小图标 */
+.icon {
+  width: 100%;
+  padding: 35rpx 40rpx;
+
+}
+
+.icon_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list {
+  width: 21%;
+  /* height: 100rpx; */
+  margin-bottom: 20rpx;
+}
+
+.single {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.single_img image {
+  width: 100%;
+  height: 75rpx;
+}
+
+.single_title {
+  font-size: 26rpx;
+  color: #696969;
 }

@@ -1,12 +1,26 @@
 <!--index.wxml-->
 <view class="find">
-	<swiper autoplay="{{autoplay}}" 
-  duration="{{duration}}"
-  indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}" interval="{{interval}}">
-		<swiper-item wx:for="{{list}}" wx:key="index">
-			<view class="logo">
-				<image src="{{item}}" mode="{{mode}}"  />
+	<view class="top-pic">
+		<!-- 顶部的循环播放图片 -->
+		<swiper autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}" interval="{{interval}}">
+			<swiper-item wx:for="{{list}}" wx:key="index">
+				<view class="logo">
+					<image src="{{item}}" mode="{{mode}}" />
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 小图标 -->
+	<view class="icon">
+		<view class="icon_list">
+			<view wx:for="{{icon_list}}" wx:key="index" class="list">
+				<view class="single">
+					<view class="single_img">
+						<image src="{{item.img}}" />
+					</view>
+					<view class="single_title">{{item.text}}</view>
+				</view>
 			</view>
-		</swiper-item>
-	</swiper>
+		</view>
+	</view>
 </view>
