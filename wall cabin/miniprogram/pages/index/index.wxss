@@ -1,4 +1,7 @@
 /**index.wxss**/
+.hover_class{
+ background: #fff;
+}
 /* top大图 */
 .top-pic {
   width: 100%;
@@ -66,4 +69,18 @@ swiper-item {
 .single_title {
   font-size: 26rpx;
   color: #666;
+}
+/* 风景 */
+.scenery{
+  padding: 20rpx 30rpx;
+}
+.scenery_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  color: #000;
+}
+.back{
+  color: #F0E68C;
 }

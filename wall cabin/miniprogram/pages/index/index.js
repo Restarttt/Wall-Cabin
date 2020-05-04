@@ -55,7 +55,7 @@ Page({
 
     ]
   },
-  scenery_data: [{
+  scenery_data: {
     back: "../../images/scenery/back1.png",
     dot: '../../images/scenery/dot.png',
     list: [{
@@ -77,6 +77,6 @@ Page({
       }
 
     ]
-  }]
+  }
 
 })

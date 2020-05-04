@@ -14,12 +14,14 @@
 	<view class="icon">
 		<view class="icon_list">
 			<view wx:for="{{icon_list}}" wx:key="index" class="list">
+			<navigator url="../special/special" hover-class="hover_class">
 				<view class="single">
 					<view class="single_img">
 						<image src="{{item.img}}" />
 					</view>
 					<view class="single_title">{{item.text}}</view>
 				</view>
+				</navigator>
 			</view>
 		</view>
 	</view>
@@ -27,18 +29,18 @@
 	<view class="scenery">
 		<view class="scenery_top">
 			<view class="back">
-				<image src="{{scenery_data.back}}" />
+				<image src="{{scenery_data.back}}" wx:if="{{scenery_data.back}}"/>
 				<view>more</view>
 			</view>
 			<view class="tag">
 				<view>风景</view>
-				<image src="{{scenery_data.dot}}" />
+				<image src="{{scenery_data.dot}}"  wx:if="{{scenery_data.dot}}"/>
 			</view>
 		</view>
 		<view class="scenety_bottom">
-			<view class="scenety_list" wx:for="{{scenery_data.list}} " wx:key="index" >
+			<view class="scenety_list" wx:for="{{scenery_data.list}} " wx:key="index">
 				<image src=" {{item}}" />
+			</view>
 		</view>
 	</view>
-</view>
 </view>
