@@ -1,1 +1,40 @@
 /* pages/special/special.wxss */
+.special {
+  padding: 20rpx 30rpx;
+}
+.title {
+  text-align: center;
+  margin-bottom: 13rpx;
+}
+/* 照片 */
+.main{
+  width: 100%;
+}
+.main_top {
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 80rpx;
+  text-align: right;
+}
+.tag {
+  width: 20%;
+  text-align: center;
+}
+
+.tag image {
+  width: 25rpx;
+  height: 25rpx;
+  position: relative;
+  top: 3rpx;
+  margin-left: 20rpx;
+}
+swiper{
+  width: 100%;
+  height: 241px;
+}
+.scenety_list {
+  width: 31.333%;
+  height: 385rpx;
+  margin-bottom: 20rpx;
+}

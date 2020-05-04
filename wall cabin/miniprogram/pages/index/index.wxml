@@ -26,20 +26,20 @@
 		</view>
 	</view>
 	<!-- 风景模块 -->
-	<view class="scenery">
-		<view class="scenery_top">
-			<view class="back">
-				<image src="{{scenery_data.back}}" wx:if="{{scenery_data.back}}"/>
-				<view>more</view>
+	<view class="scenery" wx:for="{{scenery}}" wx:key="index">
+		<view class="scenery_top" >
+			<view class="back" bindtap="{{back}}" >
+				<image src="{{item.back}}"/>
+						<text>more</text>
 			</view>
 			<view class="tag">
-				<view>风景</view>
-				<image src="{{scenery_data.dot}}"  wx:if="{{scenery_data.dot}}"/>
+				<text>风景</text>
+				<image src="{{item.dot}}" />
 			</view>
 		</view>
 		<view class="scenety_bottom">
-			<view class="scenety_list" wx:for="{{scenery_data.list}} " wx:key="index">
-				<image src=" {{item}}" />
+			<view class="scenety_list"  wx:for="{{item.list}}" wx:key="index" >
+				<image src=" {{item.img}}"  mode="{{mode}}"/>
 			</view>
 		</view>
 	</view>

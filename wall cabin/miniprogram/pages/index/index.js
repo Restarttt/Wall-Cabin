@@ -11,6 +11,18 @@ Page({
     interval: "3000",
     duration: "1000",
     mode: 'aspectFill',
+    back(){
+      wx.navigateToMiniProgram({
+        appId: '',
+        path: '../search/search',
+        extraData: {
+          foo: 'bar'
+        },
+        success(res) {
+          // 打开成功
+        }
+      })
+    },
     list: [
       "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
       "../../images/larger/FreshSalt_ZH-CN12818759319_1920x1080.jpg",
@@ -52,31 +64,53 @@ Page({
         img: "../../images/hot1.png",
         text: "更多"
       },
+    ],
+    scenery: [
+      {
+      back: "../../images/scenery/back1.png",
+      dot: '../../images/scenery/dot.png',
+      list: [{
+          img: '../../images/scenery/20200504164826.jpg'
+        },
+        {
+          img: '../../images/scenery/20200504164826.jpg'
+        },
+        {
+          img: '../../images/scenery/20200504164826.jpg'
+        },
+        {
+          img: '../../images/scenery/20200504164826.jpg'
+        }, {
+          img: '../../images/scenery/20200504164826.jpg'
+        },
+        {
+          img: '../../images/scenery/20200504164826.jpg'
+        }
+      ]
+    },
+    {
+      back: "../../images/scenery/back1.png",
+      dot: '../../images/scenery/dot.png',
+      list: [{
+          img: '../../images/scenery/20200504164826.jpg'
+        },
+        {
+          img: '../../images/scenery/20200504164826.jpg'
+        },
+        {
+          img: '../../images/scenery/20200504164826.jpg'
+        },
+        {
+          img: '../../images/scenery/20200504164826.jpg'
+        }, 
+        {
+          img: '../../images/scenery/20200504164826.jpg'
+        },
+   
+      ]
+    },
 
-    ]
+]
   },
-  scenery_data: {
-    back: "../../images/scenery/back1.png",
-    dot: '../../images/scenery/dot.png',
-    list: [{
-        img: '../../images/scenery/20200504164826.jpg'
-      },
-      {
-        img: '../../images/scenery/20200504164826.jpg'
-      },
-      {
-        img: '../../images/scenery/20200504164826.jpg'
-      },
-      {
-        img: '../../images/scenery/20200504164826.jpg'
-      }, {
-        img: '../../images/scenery/20200504164826.jpg'
-      },
-      {
-        img: '../../images/scenery/20200504164826.jpg'
-      }
-
-    ]
-  }
 
 })

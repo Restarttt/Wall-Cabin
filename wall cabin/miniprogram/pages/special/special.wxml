@@ -1,8 +1,25 @@
 <!--pages/special/special.wxml-->
-
 <view class="special">
-111
-<text>pages/special/special.wxml</text>
-
-
+	<view class="title">
+		ลลิษา มโนบาล
+	</view>
+	<view class="title">
+		LAlisaManoban
+	</view>
+	<!-- 照片 -->
+	<view class="main">
+		<view class="main_top">
+			<view class="tag">
+				<text>{{lisa.name}}</text>
+				<image src="../../images/scenery/dot.png" />
+			</view>
+		</view>
+		<swiper>
+			<swiper-item wx:for='{{lisa.list}}' wx:key='index' display-multiple-items="{{displayMultipleItems}}">
+			<view class="one">
+			<image   src="{{item.img}}"  mode="{{mode}}"/>
+			</view>
+			</swiper-item>
+		</swiper>
+	</view>
 </view>
