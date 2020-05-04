@@ -12,28 +12,28 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "color": "#ccc",
+    "color": "#666",
     "selectedColor": "#F0E68C",
-    "backgroundColor": "#fff",
+    "backgroundColor": "#f8f8f8",
     "borderStyle": "white",
     "list": [{
         "pagePath": "pages/home/home",
         "text": "我的",
-        "iconPath": "/images/me1.png",
-        "selectedIconPath": "/images/me.png"
+        "iconPath": "/images/tabBar/me3.png",
+        "selectedIconPath": "/images/tabBar/me5.png"
       },
       {
         "pagePath": "pages/search/search",
         "text": "搜索",
-        "iconPath": "/images/search1.png",
-        "selectedIconPath": "/images/search.png"
+        "iconPath": "/images/tabBar/search4.png",
+        "selectedIconPath": "/images/tabBar/serarch3.png"
        
       },
       {
         "pagePath": "pages/index/index",
         "text": "发现",
-        "iconPath": "/images/find.png",
-        "selectedIconPath": "/images/find1.png"
+        "iconPath": "/images/tabBar/find3.png",
+        "selectedIconPath": "/images/tabBar/find4.png"
       }
     ]
   },

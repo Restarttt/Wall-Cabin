@@ -23,4 +23,22 @@
 			</view>
 		</view>
 	</view>
+	<!-- 风景模块 -->
+	<view class="scenery">
+		<view class="scenery_top">
+			<view class="back">
+				<image src="{{scenery_data.back}}" />
+				<view>more</view>
+			</view>
+			<view class="tag">
+				<view>风景</view>
+				<image src="{{scenery_data.dot}}" />
+			</view>
+		</view>
+		<view class="scenety_bottom">
+			<view class="scenety_list" wx:for="{{scenery_data.list}} " wx:key="index" >
+				<image src=" {{item}}" />
+		</view>
+	</view>
+</view>
 </view>

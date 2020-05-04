@@ -2,9 +2,12 @@
 /* top大图 */
 .top-pic {
   width: 100%;
-  padding: 15px 26px;
+  padding: 20rpx  30rpx;
+  box-sizing: border-box;
 }
-
+swiper{
+  height:400rpx
+}
 swiper-item {
   width: 100%;
   height: 100%;
@@ -12,41 +15,47 @@ swiper-item {
 }
 
 .logo {
-  width: 100vw;
   height: 100%;
 }
 
 .logo image {
+  /* width: 100%; */
+  display: block;
   height: 100%;
   border-radius: 20rpx;
   margin: 0 auto;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 /*icon小图标 */
 .icon {
   width: 100%;
-  padding: 35rpx 40rpx;
+  padding: 35rpx 0;
 
 }
 
 .icon_list {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 auto;
+
 }
 
 .list {
   width: 21%;
   /* height: 100rpx; */
-  margin-bottom: 20rpx;
+  margin-bottom: 30rpx;
 }
 
 .single {
-  width: 100%;
+  width: 50%;
   height: 100%;
   text-align: center;
+  margin: 0 auto;
+
 }
 
 .single_img image {
@@ -56,5 +65,5 @@ swiper-item {
 
 .single_title {
   font-size: 26rpx;
-  color: #696969;
+  color: #666;
 }
