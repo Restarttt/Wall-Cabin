@@ -1,1 +1,49 @@
 /**home.wxss**/
+.home {
+  padding: 20rpx 30rpx;
+}
+
+.head {
+  margin-bottom: 60rpx;
+  margin: 0 auto;
+}
+.photo{
+  width: 170rpx;
+  height: 170rpx;
+  margin: 31rpx auto;
+  box-sizing: border-box; 
+  padding: 5px; 
+  border-radius: 50%; 
+  background-image: -webkit-linear-gradient(top, #5EFCE8 -20%, #5EFCE8 30%, #736EFE 60%, #736EFE 100%);  
+  background-image: -moz-linear-gradient(top, #5EFCE8 -20%, #5EFCE8 30%, #736EFE 60%, #736EFE 100%);  
+  background-image: linear-gradient(top, #5EFCE8 -20%, #5EFCE8 30%, #736EFE 60%, #736EFE 100%);  
+  position: relative;
+}
+.photo image {
+  position: absolute;
+  width: 162rpx;
+  height:162rpx;
+  border-radius: 50%;
+  border-image: linear-gradient( 135deg, #5EFCE8 10%, #736EFE 100%);
+  top: 5rpx;
+left: 5rpx;
+
+}
+
+.login_btn {
+  width: 50%;
+  height: 67rpx;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 50rpx;
+  background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+  text-align: center;
+  line-height: 67rpx;
+  
+  
+
+}
+/* 作者部分 */
+.service{
+  width: 100%;
+}

@@ -14,8 +14,8 @@
 				<image src="../../images/scenery/dot.png" />
 			</view>
 		</view>
-		<swiper>
-			<swiper-item wx:for='{{lisa.list}}' wx:key='index' display-multiple-items="{{displayMultipleItems}}">
+		<swiper display-multiple-items="{{displayMultipleItems}}">
+			<swiper-item wx:for='{{lisa.list}}' wx:key='index' >
 			<view class="one">
 			<image   src="{{item.img}}"  mode="{{mode}}"/>
 			</view>

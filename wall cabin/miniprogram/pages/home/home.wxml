@@ -1,4 +1,21 @@
 <!--home.wxml-->
 <view class="home">
+	<!-- 头像部分 -->
+	<view class="head">
+		<view class="photo">
+			<image src="../../images/Lisa/lalalalis__m__91260511_523347191932890_1519412240126646988_n.jpg" />
+		</view>
+		<view class="login_btn">login</view>
+	</view>
+	<!-- 作者部分 -->
+	<view class="service">
+		<view class="serve">
+			<view wx:for="{{serve}}" wx:key="index">
+				<view class="btn">{{item.name}}</view>
+				<image src="{{item.img}}" />
+			</view>
+		</view>
 
+
+	</view>
 </view>

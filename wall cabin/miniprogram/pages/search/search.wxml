@@ -1,4 +1,8 @@
 <!-- search wxml -->
 <view class="search">
-
+	<input class="search_btn" placeholder-style="color:	#696969" placeholder="LAlisaManoban">
+	<view class="glass">
+		<image  src="../../images/glass.png" />
+	</view>
+	</input>
 </view>

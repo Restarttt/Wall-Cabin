@@ -15,11 +15,13 @@
   font-size: 28rpx;
   color: #333;
   line-height: 80rpx;
-  text-align: right;
+  position: relative;
 }
 .tag {
   width: 20%;
   text-align: center;
+  position: absolute;
+  right: 0;
 }
 
 .tag image {
@@ -28,13 +30,21 @@
   position: relative;
   top: 3rpx;
   margin-left: 20rpx;
+
 }
 swiper{
   width: 100%;
   height: 241px;
 }
-.scenety_list {
+.swiper-item {
   width: 31.333%;
   height: 385rpx;
   margin-bottom: 20rpx;
+}.one{
+  width: 100%;
+  height: 100%;
+}
+.one image{
+  width: 100%;
+  border-radius: 8rpx;
 }
