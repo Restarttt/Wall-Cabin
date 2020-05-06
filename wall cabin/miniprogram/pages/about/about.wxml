@@ -1,2 +1,22 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view class="about">
+	<!-- 作者信息 -->
+	<view class="message">
+		<view class="pic">
+			<!-- <image src="../../images/scenery/IMG_20200506_162345.jpg"  /> -->
+		</view>
+		<view class="wechat">
+			<image src="../../images/wechat.png" ></image>
+			<view class="title" bindtap="copy">Shot-ZH</view>
+		</view>
+		<view class="wechat">
+			<image src="../../images/mail.png"></image>
+			<view class="title" bindtap="copy_1">1546838798@qq.com</view>
+		</view>
+	</view>
+	<!-- 免责 -->
+	<view class="exemption">
+		免责声明: 壁纸内容均来自互联网，如有涉及版权问题，请随时告知我
+	</view>
+
+</view>

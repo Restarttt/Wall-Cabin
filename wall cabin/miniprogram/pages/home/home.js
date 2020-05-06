@@ -3,17 +3,19 @@ const app = getApp()
 
 Page({
   data: {
-    userName: '',
-    userImg: "",
+    userName: 'Lalisa',
+    userImg: "../../images/Lisa/lalalalis__m__91260511_523347191932890_1519412240126646988_n.jpg",
     serve: [{
       name: '收藏',
       img: "../../images/home/collect.png",
       type: 0,
+      url: '../../pages/collect/collect'
 
     }, {
-      name: '最近',
+      name: '交流',
       img: "../../images/home/time.png",
-      type: 0
+      type: 0,
+      url: '../../pages/lately/lately'
     }, {
       name: '关于',
       img: "../../images/home/heart.png",

@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/home/home",
     "pages/search/search",
-    "pages/index/index",
+
     "pages/special/special",
     "pages/about/about",
     "pages/collect/collect",
@@ -22,8 +23,8 @@
     "backgroundColor": "#fff",
     "borderStyle": "white",
     "list": [{
-        "pagePath": "pages/home/home",
-        "text": "我的",
+        "pagePath": "pages/index/index",
+        "text": "发现",
         "iconPath": "/images/tabBar/me3.png",
         "selectedIconPath": "/images/tabBar/me5.png"
       },
@@ -32,11 +33,13 @@
         "text": "搜索",
         "iconPath": "/images/tabBar/search4.png",
         "selectedIconPath": "/images/tabBar/serarch3.png"
-       
+
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "发现",
+
+        "pagePath": "pages/home/home",
+        "text": "我的",
+
         "iconPath": "/images/tabBar/find3.png",
         "selectedIconPath": "/images/tabBar/find4.png"
       }

@@ -1,2 +1,9 @@
 <!--pages/lately/lately.wxml-->
-<text>pages/lately/lately.wxml</text>
+<view class="exchage">
+<!-- 方法一 -->
+	<view class="frist">
+    
+  </view>
+  <!-- 方法二 -->
+  <view class="secend"></view>
+</view>
