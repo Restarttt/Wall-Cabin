@@ -1,4 +1,5 @@
 <!--home.wxml-->
+
 <view class="home">
 	<!-- 头像部分 -->
 	<view class="head">
@@ -6,7 +7,9 @@
 			<image src="{{userImg}}" />
 			<view class="user_name">{{userName}}</view>
 		</view>
-		<button class="login_btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">登录</button>
+		<block >
+			<button class="login_btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" wx:if="{{toggle}}">登录</button>
+		</block>
 
 	</view>
 	<!-- 作者部分 -->

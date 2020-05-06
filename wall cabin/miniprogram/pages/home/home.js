@@ -2,8 +2,10 @@
 const app = getApp()
 
 Page({
+
   data: {
-    userName: 'Lalisa',
+    toggle: true,
+    userName: '',
     userImg: "../../images/Lisa/lalalalis__m__91260511_523347191932890_1519412240126646988_n.jpg",
     serve: [{
       name: '收藏',
@@ -31,18 +33,24 @@ Page({
     wx.getSetting({
       success: (res) => {
         if (res.authSetting['scope.userInfo']) {
+          this.setData({
+        
+          })
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
             success: (res) => {
               let userName = res.userInfo.nickName
               let userImg = res.userInfo.avatarUrl
               this.setData({
-                userName: userName ,
+                userName: userName,
                 userImg: userImg,
+                toggle: false,
+
               })
               console.log(res.userInfo.nickName)
               console.log(res.userInfo)
             }
+
           })
         } else {
           wx.showToast({
@@ -55,5 +63,4 @@ Page({
       }
     })
   },
-
 })

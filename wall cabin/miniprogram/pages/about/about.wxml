@@ -3,6 +3,7 @@
 	<!-- 作者信息 -->
 	<view class="message">
 		<view class="pic">
+    
 			<!-- <image src="../../images/scenery/IMG_20200506_162345.jpg"  /> -->
 		</view>
 		<view class="wechat">

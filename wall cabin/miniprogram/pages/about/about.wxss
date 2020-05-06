@@ -1,26 +1,34 @@
 /* pages/about/about.wxss */
-.about{
-  padding:  20rpx 30rpx;
+.about {
+  padding: 20rpx 50rpx;
 }
-.exemption{
+
+.exemption {
   text-align: center;
   color: #666;
-position: fixed;
-bottom: 20rpx;
+  position: fixed;
+  bottom: 30rpx;
+  left: 0;
+  font-size: 28rpx;
+  padding: 0 50rpx;
 }
-.message{
+
+.message {
   height: 700rpx;
 }
-.pic{
+
+.pic {
   width: 100%;
   background: #000;
 }
-.pic image{
+
+.pic image {
   margin: 0 auto;
 }
-.wechat{
+
+.wechat {
   margin: 0 auto;
-  width: 60%;
+  width: 65%;
   border-bottom: 4rpx solid #f3f4f5;
   margin-bottom: 20rx;
   display: flex;
@@ -28,13 +36,15 @@ bottom: 20rpx;
   align-items: center;
   margin-bottom: 25rpx;
 }
-.wechat image{
+
+.wechat image {
   width: 70rpx;
   height: 60rpx;
- margin-right: 20rpx;
+  margin-right: 36rpx;
 
 }
-.title{
+
+.title {
   color: #666;
   font-size: 28rpx;
 
