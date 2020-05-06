@@ -3,19 +3,32 @@
 	<!-- 头像部分 -->
 	<view class="head">
 		<view class="photo">
-			<image src="../../images/Lisa/lalalalis__m__91260511_523347191932890_1519412240126646988_n.jpg" />
+			<image src="../../images/dlwlrma_29716870_939659162863728_1442154674017796096_n.jpg" />
 		</view>
-		<button class="login_btn" bindgetuserinfo="onGotUserInfo" open-type="getUserInfo">login</button>
-		<!-- <view class="login_btn">login</view> -->
+		<button class="login_btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">登录</button>
 	</view>
 	<!-- 作者部分 -->
 	<view class="service">
 		<view class="serve">
 			<view wx:for="{{serve}}" wx:key="index" class="list">
-				<button open-type="contact" wx:if="type === 1">{{item.name}}</button>
-				<view class="icon">
-				<image src="{{item.img}}" />
-				</view>
+				<navigator url="{{item.url}}" hover-class="navigator-hover">
+					<view class="list_btn">
+						<view class="frist" wx:if="{{item.type === 0}}">
+							{{item.name}}
+						</view>
+						<button open-type="contact" wx:if="{{item.type === 1}}">
+							<view class="skip">
+								{{item.name}}
+							</view>
+							<view class="icon">
+								<image src="{{item.img}}" />
+							</view>
+						</button>
+						<view class="icon" wx:if="{{item.type === 0}}">
+							<image src="{{item.img}}" />
+						</view>
+					</view>
+				</navigator>
 			</view>
 		</view>
 	</view>

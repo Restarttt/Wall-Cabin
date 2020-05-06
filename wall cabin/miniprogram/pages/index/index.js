@@ -44,6 +44,7 @@ Page({
     scenery: [{
       back: "../../images/scenery/back1.png",
       dot: '../../images/scenery/dot.png',
+      name:"风景",
       list: [{
         img: '../../images/scenery/20200504164826.jpg'
       }, {
@@ -61,6 +62,26 @@ Page({
     {
       back: "../../images/scenery/back1.png",
       dot: '../../images/scenery/dot.png',
+      name:"创意",
+      list: [{
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      }]
+    },{
+      back: "../../images/scenery/back1.png",
+      dot: '../../images/scenery/dot.png',
+      name:"建筑",
       list: [{
         img: '../../images/scenery/20200504164826.jpg'
       },
@@ -77,6 +98,47 @@ Page({
         img: '../../images/scenery/20200504164826.jpg'
       }]
     },
+    {
+      back: "../../images/scenery/back1.png",
+      dot: '../../images/scenery/dot.png',
+      name:"二次元",
+      list: [{
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      }]
+    },
+    {
+      back: "../../images/scenery/back1.png",
+      dot: '../../images/scenery/dot.png',
+      name:"动物",
+      list: [{
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      },
+      {
+        img: '../../images/scenery/20200504164826.jpg'
+      }]
+    },
+
   ]
   },
   back() {

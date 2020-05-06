@@ -14,32 +14,32 @@
 	<view class="icon">
 		<view class="icon_list">
 			<view wx:for="{{icon_list}}" wx:key="index" class="list">
-			<navigator url="../special/special" hover-class="hover_class">
-				<view class="single">
-					<view class="single_img">
-						<image src="{{item.img}}" />
+				<navigator url="../special/special" hover-class="hover_class">
+					<view class="single">
+						<view class="single_img">
+							<image src="{{item.img}}" />
+						</view>
+						<view class="single_title">{{item.text}}</view>
 					</view>
-					<view class="single_title">{{item.text}}</view>
-				</view>
 				</navigator>
 			</view>
 		</view>
 	</view>
 	<!-- 风景模块 -->
 	<view class="scenery" wx:for="{{scenery}}" wx:key="index">
-		<view class="scenery_top" >
-			<view class="back" bindtap="back" >
-				<image src="{{item.back}}"/>
-						<text></text>
+		<view class="scenery_top">
+			<view class="back" bindtap="back">
+				<image src="{{item.back}}" />
+				<text></text>
 			</view>
 			<view class="tag">
-				<text>风景</text>
+				<text>{{item.name}}</text>
 				<image src="{{item.dot}}" />
 			</view>
-	</view>
-	<view class="scenety_bottom">
-			<view class="scenety_list"  wx:for="{{item.list}}" wx:key="index" >
-				<image src=" {{item.img}}"  mode="{{mode}}"/>
+		</view>
+		<view class="scenety_bottom">
+			<view class="scenety_list" wx:for="{{item.list}}" wx:key="index">
+				<image src=" {{item.img}}" mode="{{mode}}" />
 			</view>
 		</view>
 	</view>

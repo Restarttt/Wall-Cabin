@@ -41,7 +41,7 @@
   background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
   text-align: center;
   line-height: 67rpx;
-padding: 0;
+  padding: 0;
 
 
 }
@@ -61,12 +61,24 @@ padding: 0;
 
 .list {
   width: 48%;
+  height: 90rpx;
   background-color: #f8f8f8;
   margin-bottom: 33rpx;
   height: 100rpx;
   border-radius: 10rpx;
+
+  /* position: relative; */
+}
+
+.list_btn {
+  height: 100%;
   display: flex;
-  position: relative;
+  margin: 0 auto;
+  line-height: 100rpx;
+  justify-content: center;
+  color: #666;
+  align-items: center;
+  font-weight: 400;
 }
 
 .icon {
@@ -74,23 +86,37 @@ padding: 0;
   height: 55rpx;
   border-radius: 50%;
   background-color: #fff;
-  position: absolute;
-  right: 51rpx;
-  top: 26rpx;
-  
+  position: relative;
+  left: 20rpx;
+  top: 3rpx;
 }
 
-.serve image {
+.icon image {
   width: 35rpx;
   height: 35rpx;
-  position: relative;
-  left: 16%;
-  top: 17%;
+  position: absolute;
+  top: 20%;
+  left: 18%;
 }
 button {
+  height: 54px;
   padding: 0;
-  line-height: 100rpx;
-  font-weight: 500;
+  width: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-hover {
+  background-color: #fff;
+}
+
+.skip {
+  font-weight: 400;
   color: #666;
   font-size: 30rpx;
+
+}
+.navigator-hover {
+  background-color: #F5F5F5;
 }
