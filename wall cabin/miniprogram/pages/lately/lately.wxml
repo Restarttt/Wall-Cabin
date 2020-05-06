@@ -1,9 +1,16 @@
 <!--pages/lately/lately.wxml-->
 <view class="exchage">
-<!-- 方法一 -->
-	<view class="frist">
-    
+<!-- 列表 -->
+	<view class="list" wx:for='{{list}}' wx:key="index">
+		<view class="one">
+			<image src="  {{item.img}}" />
+		</view>
+	</view>
+  <!-- end -->
+  <view class="end">
+    <view class="name">
+       <view class="line"></view>
+       <view class="title">IN  YOUR  AREA</view>
+    </view>  
   </view>
-  <!-- 方法二 -->
-  <view class="secend"></view>
 </view>

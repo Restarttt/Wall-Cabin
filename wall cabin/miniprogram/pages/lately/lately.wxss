@@ -1,1 +1,57 @@
 /* pages/lately/lately.wxss */
+.exchage {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 30rpx;
+  justify-content: space-between;
+}
+
+.list {
+  width: 31.333%;
+}
+
+.one {
+  position: relative;
+  margin-bottom: 20rpx;
+
+}
+
+.one image {
+  width: 100%;
+  height: 385rpx;
+  border-radius: 8rpx;
+}
+
+.one .tag {
+  width: 40rpx;
+  height: 47rpx;
+  position: absolute;
+  bottom: 14rpx;
+  right: 4rpx;
+
+}
+/* end */
+.end{
+  width: 90%;
+  position: fixed;
+  bottom: 28px;
+}
+.name{
+  position: relative;
+}
+.line{
+  width: 100%;
+  height: 2rpx;
+  background-color: #F5F5F5;
+
+}
+.title{
+  color: #666;
+  position: absolute;
+  top: -18rpx;
+  left: 30%;
+  background-color: #fff;
+  width: 40%;
+  text-align: center;
+  font-size: 25rpx; 
+}

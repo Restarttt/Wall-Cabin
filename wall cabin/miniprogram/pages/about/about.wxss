@@ -2,9 +2,14 @@
 .about {
   padding: 20rpx 50rpx;
 }
+
 /* 二维码 */
 .pic {
   width: 100%;
+  margin: 200rpx auto 100rpx;
+  display: inline-block;
+  text-align: center;
+
 }
 
 .pic image {
@@ -12,16 +17,19 @@
   height: 150rpx;
   border-radius: 10rpx;
   margin-bottom: 20rpx;
-  
+
 }
-.theme{
+
+.theme {
   text-align: center;
 
 }
-.name{
+
+.name {
   text-align: center;
   color: #666;
 }
+
 /* 免责声明 */
 .exemption {
   text-align: center;
@@ -33,8 +41,9 @@
   padding: 30rpx 50rpx;
   background-color: #f3f4f5;
   right: 0;
-  
+
 }
+
 /* 个人信息 */
 .message {
   height: 700rpx;
@@ -63,7 +72,8 @@
   color: #666;
   font-size: 28rpx;
 }
-.copy{
+
+.copy {
   color: #666;
   text-align: center;
 }
