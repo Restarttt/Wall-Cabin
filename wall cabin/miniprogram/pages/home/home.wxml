@@ -3,9 +3,11 @@
 	<!-- 头像部分 -->
 	<view class="head">
 		<view class="photo">
-			<image src="../../images/dlwlrma_29716870_939659162863728_1442154674017796096_n.jpg" />
+			<image src="{{userImg}}" />
+			<view class="user_name">{{userName}}</view>
 		</view>
 		<button class="login_btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">登录</button>
+
 	</view>
 	<!-- 作者部分 -->
 	<view class="service">

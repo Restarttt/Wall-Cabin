@@ -4,7 +4,10 @@
     "pages/search/search",
     "pages/index/index",
     "pages/special/special",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/collect/collect",
+    "pages/lately/lately"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -15,9 +15,10 @@
   box-sizing: border-box;
   padding: 5px;
   border-radius: 50%;
-  background-image: -webkit-linear-gradient(top, #5EFCE8 -20%, #5EFCE8 30%, #736EFE 60%, #736EFE 100%);
-  background-image: -moz-linear-gradient(top, #5EFCE8 -20%, #5EFCE8 30%, #736EFE 60%, #736EFE 100%);
-  background-image: linear-gradient(top, #5EFCE8 -20%, #5EFCE8 30%, #736EFE 60%, #736EFE 100%);
+  background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+  /* background-image: -webkit-linear-gradient(top, #5EFCE8 -20%, #736EFE 30%, #736EFE 60%,#5EFCE8 100%);
+  background-image: -moz-linear-gradient(top, #5EFCE8 -20%,#736EFE 30%, #736EFE 60%, #5EFCE8 100%);
+  background-image: linear-gradient(top, #5EFCE8 -20%,#736EFE 30%,  #736EFE 60%,#5EFCE8 100%); */
   position: relative;
 }
 
@@ -26,10 +27,15 @@
   width: 162rpx;
   height: 162rpx;
   border-radius: 50%;
-  border-image: linear-gradient(135deg, #5EFCE8 10%, #736EFE 100%);
   top: 5rpx;
   left: 5rpx;
 
+}
+
+.user_name {
+  margin-top: 177rpx;
+  text-align: center;
+  color: #43CBFF;
 }
 
 .login_btn {
@@ -42,8 +48,6 @@
   text-align: center;
   line-height: 67rpx;
   padding: 0;
-
-
 }
 
 /* 作者部分 */
@@ -98,6 +102,7 @@
   top: 20%;
   left: 18%;
 }
+
 button {
   height: 54px;
   padding: 0;
@@ -117,6 +122,7 @@ button {
   font-size: 30rpx;
 
 }
+
 .navigator-hover {
   background-color: #F5F5F5;
 }
