@@ -14,7 +14,7 @@
 	<view class="icon">
 		<view class="icon_list">
 			<view wx:for="{{icon_list}}" wx:key="index" class="list">
-				<navigator url="../special/special" hover-class="hover_class">
+				<navigator url="{{item.url}}" hover-class="hover_class">
 					<view class="single">
 						<view class="single_img">
 							<image src="{{item.img}}" />

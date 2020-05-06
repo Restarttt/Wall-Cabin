@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   padding: 20rpx 30rpx;
   justify-content: space-between;
-  background: url();
 }
 
 .list {

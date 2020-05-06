@@ -14,7 +14,7 @@ Page({
       url: '../../pages/collect/collect'
 
     }, {
-      name: '交流',
+      name: '最近',
       img: "../../images/home/time.png",
       type: 0,
       url: '../../pages/lately/lately'
@@ -45,7 +45,6 @@ Page({
                 userName: userName,
                 userImg: userImg,
                 toggle: false,
-
               })
               console.log(res.userInfo.nickName)
               console.log(res.userInfo)

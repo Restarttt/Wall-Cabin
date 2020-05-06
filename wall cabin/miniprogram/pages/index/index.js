@@ -14,32 +14,39 @@ Page({
     list: [
       "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
       "../../images/larger/HallwylfjelletSunset_ZH-CN9300910376_1920x1080.jpg",
-      "../../images/larger/midmoon_ZH-CN4973736313_1920x1080.jpg"
     ],
     icon_list: [{
       img: "../../images/hot1.png",
-      text: "专栏"
+      text: "专栏",
+      url:'../special/special'
     }, {
       img: "../../images/hot1.png",
-      text: "排行"
+      text: "排行",
+      url:'../special/special'
     }, {
       img: "../../images/hot1.png",
-      text: "最近"
+      text: "最近",
+      url:'../special/special'
     }, {
       img: "../../images/hot1.png",
-      text: "热门"
+      text: "热门",
+      url:'../special/special'
     }, {
       img: "../../images/hot1.png",
-      text: "随机"
+      text: "随机",
+      url:'../special/special'
     }, {
       img: "../../images/hot1.png",
-      text: "4K"
+      text: "4K",
+      url:'../special/special'
     }, {
       img: "../../images/hot1.png",
-      text: "PC"
+      text: "PC",
+      url:'../special/special'
     }, {
       img: "../../images/hot1.png",
-      text: "更多"
+      text: "更多",
+      url:'../special/special'
     }],
     scenery: [{
       back: "../../images/scenery/back1.png",
