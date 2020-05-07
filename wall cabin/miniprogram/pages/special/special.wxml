@@ -7,19 +7,20 @@
 		LAlisaManoban
 	</view>
 	<!-- 照片 -->
-	<view class="main">
+	<view class="main" wx:for='{{lisa}}' wx:key='index'>
 		<view class="main_top">
 			<view class="tag">
-				<text>{{lisa.name}}</text>
+				<text>{{item.name}}</text>
 				<image src="../../images/scenery/dot.png" />
 			</view>
 		</view>
 		<swiper display-multiple-items="{{displayMultipleItems}}">
-			<swiper-item wx:for='{{lisa.list}}' wx:key='index' >
-			<view class="one">
-			<image   src="{{item.img}}"  mode="{{mode}}"/>
-			</view>
+			<swiper-item wx:for='{{item.list}}' wx:key='index'>
+				<view class="one">
+					<image src="{{item.img}}" mode="{{mode}}" />
+				</view>
 			</swiper-item>
 		</swiper>
 	</view>
+
 </view>
