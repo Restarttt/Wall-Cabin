@@ -16,8 +16,8 @@
 			<view class="title" bindtap="copy_1">1546838798@qq.com</view>
 		</view>
 			<view class="wechat">
-			<image src="../../images/mail.png"></image>
-			<view class="title" bindtap="copy_1">1546838798@qq.com</view>
+			<image src="../../images/exchange.png"></image>
+			<view class="title" >1546838798@qq.com</view>
 		</view>
 		<view class="copy">Tips: 点击即可复制</view>
 	</view>

@@ -63,7 +63,7 @@
 }
 
 .wechat image {
-  width: 66rpx;
+  width: 64rpx;
   height: 60rpx;
   margin-right: 36rpx;
 }
@@ -76,4 +76,5 @@
 .copy {
   color: #666;
   text-align: center;
+  font-size: 21rpx;
 }

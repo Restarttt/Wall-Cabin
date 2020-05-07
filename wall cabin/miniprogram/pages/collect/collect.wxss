@@ -23,12 +23,11 @@
 }
 
 .one .tag {
-  width: 40rpx;
-  height: 47rpx;
+  width: 32rpx;
+  height: 38rpx;
   position: absolute;
-  bottom: 14rpx;
-  right: 4rpx;
-
+  bottom: 15rpx;
+  right: 9rpx;
 }
 /* end */
 .end{
