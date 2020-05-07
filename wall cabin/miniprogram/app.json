@@ -3,11 +3,11 @@
     "pages/index/index",
     "pages/home/home",
     "pages/search/search",
-
     "pages/special/special",
     "pages/about/about",
     "pages/collect/collect",
-    "pages/lately/lately"
+    "pages/lately/lately",
+    "pages/detail/detail"
 
   ],
   "window": {
@@ -46,5 +46,9 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "kbone": false,
+    "weui": true
+  }
 }

@@ -153,5 +153,10 @@ Page({
     wx.switchTab({
       url: '/pages/search/search',
     })
+  },
+  go() {
+    wx.navigateTo({
+      url: '../../pages/detail/detail',
+    })
   }
 })

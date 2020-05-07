@@ -16,9 +16,10 @@ Page({
       }, {
         img: "../../images/scenery/20200504164826.jpg"
       }
-
     ]
-
   },
+  delete(){
+    
+  }
 
 })
