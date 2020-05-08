@@ -1,4 +1,30 @@
 <!--pages/detail/detail.wxml-->
 <view class="detail">
-11
+	<!-- 大图 -->
+	<view class="big">
+		<image src="../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg" />
+	</view>
+	<!-- 底部 -->
+	<view class="download">
+		<view class="title">
+			<view class="home" bindtap="go">
+				<view class="icon">
+					<image src="../../images/home/index.png" />
+				</view>
+				<view class="name" >首页</view>
+			</view>
+			<view class="home">
+				<view class="down_icon" bindtap="save">
+					<image src="../../images/home/download.png" class="down" />
+				</view>
+				<view class="down_name" >保存</view>
+			</view>
+			<view class="home">
+				<view class="icon">
+					<image src="../../images/home/share.png" />
+				</view>
+				<view class="name">分享</view>
+			</view>
+		</view>
+	</view>
 </view>

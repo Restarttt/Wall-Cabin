@@ -4,9 +4,9 @@
 	<view class="list" wx:for='{{list}}' wx:key="index">
 		<view class="one">
 			<image src="  {{item.img}}" />
-			<block bindtap="detele">
-				<image src="../../images/tag.png" class="tag"/>
-			</block>
+			<view >
+				<image bindtap="delete" src="../../images/tag.png" class="tag" />
+			</view>
 		</view>
 	</view>
 	<!-- end -->
