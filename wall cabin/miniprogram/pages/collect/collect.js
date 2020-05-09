@@ -17,11 +17,12 @@ Page({
       img: "../../images/scenery/20200504164826.jpg"
     }]
   },
-  delete() {
-    console.log(this.list)
-    this.list.splice(index, 1)
-    this.setData({
-      list: this.list.splice(index, 1)
-    })
-  }
+  // delete() {
+  //   console.log(this.data.list)
+  //   let a = this.data.list.splice(index,1)
+  //   console.log(a)
+  //   this.setData({
+  //     list: a
+  //   })
+  // }
 })

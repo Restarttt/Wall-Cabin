@@ -7,11 +7,11 @@
 	<!-- 底部 -->
 	<view class="download">
 		<view class="title">
-			<view class="home" bindtap="go">
+			<view class="home" >
 				<view class="icon">
-					<image src="../../images/home/index.png" />
+					<image src="../../images/home/collectt.png" />
 				</view>
-				<view class="name" >首页</view>
+				<view class="name" >收藏</view>
 			</view>
 			<view class="home">
 				<view class="down_icon" bindtap="save">

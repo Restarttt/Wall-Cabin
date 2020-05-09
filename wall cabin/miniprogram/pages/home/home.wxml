@@ -7,11 +7,23 @@
 			<image src="{{userImg}}" />
 			<view class="user_name">{{userName}}</view>
 		</view>
-		<block >
+		<block>
 			<button class="login_btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" wx:if="{{toggle}}">登录</button>
 		</block>
-
 	</view>
+	<!-- 积分部分 -->
+	<view class="integral">
+		<view class="sum">
+			<view class="sunm_l">
+				你的积分
+			</view>
+			<view class="sum_r">
+			  <view class="number"> 0</view>
+				<image></image>
+			</view>
+		</view>
+	</view>
+
 	<!-- 作者部分 -->
 	<view class="service">
 		<view class="serve">

@@ -5,7 +5,8 @@ Page({
   save(){
   },
   go(){
-    wx.navigateTo({
+    console.log(222)
+    wx.switchTab({
       url: '../../pages/index/index',
     })
   }
