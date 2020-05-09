@@ -4,8 +4,9 @@ const app = getApp()
 Page({
   data: {
     toggle: true,
+    show: false,
     userName: '',
-    userImg: "../../images/Lisa/lalalalis__m__91260511_523347191932890_1519412240126646988_n.jpg",
+    userImg: "../../images/home/default.png",
     serve: [{
       name: '收藏',
       img: "../../images/home/collect.png",
@@ -28,30 +29,30 @@ Page({
     }],
     sign: [{
         num: '5+',
-        name: "第一天",
+        name: "一天",
       }, {
         num: '10+',
-        name: "第二天",
+        name: "二天",
       },
       {
         num: '15+',
-        name: "第三天",
+        name: "三天",
       },
       {
         num: '20+',
-        name: "第四天",
+        name: "四天",
       },
       {
         num: '25+',
-        name: "第五天",
+        name: "五天",
       },
       {
         num: '30+',
-        name: "第六天",
+        name: "六天",
       },
       {
         num: '100+',
-        name: "第七天",
+        name: "七天",
       },
     ]
   },
@@ -71,6 +72,7 @@ Page({
                 userName: userName,
                 userImg: userImg,
                 toggle: false,
+                show: true
               })
               console.log(res.userInfo.nickName)
               console.log(res.userInfo)

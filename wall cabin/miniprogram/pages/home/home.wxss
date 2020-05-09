@@ -4,8 +4,7 @@
 }
 
 .head {
-  margin-bottom: 60rpx;
-  margin: 0 auto;
+  margin-bottom: 100rpx;
 }
 
 .photo {
@@ -15,10 +14,10 @@
   box-sizing: border-box;
   padding: 5px;
   border-radius: 50%;
-  background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
-  /* background-image: -webkit-linear-gradient(top, #5EFCE8 -20%, #736EFE 30%, #736EFE 60%,#5EFCE8 100%);
-  background-image: -moz-linear-gradient(top, #5EFCE8 -20%,#736EFE 30%, #736EFE 60%, #5EFCE8 100%);
-  background-image: linear-gradient(top, #5EFCE8 -20%,#736EFE 30%,  #736EFE 60%,#5EFCE8 100%); */
+  /* background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); */
+  background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+  /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
+  /* background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%); */
   position: relative;
 }
 
@@ -39,12 +38,15 @@
 }
 
 .login_btn {
-  width: 50%;
+  width: 40%;
   height: 67rpx;
   margin: 0 auto;
   color: #fff;
   border-radius: 50rpx;
-  background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+  background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+  /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
+  /* background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); */
+  /* background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%); */
   text-align: center;
   line-height: 67rpx;
   padding: 0;
@@ -52,17 +54,19 @@
 
 /* 积分部分 */
 .integral {
-  width: 100%;
-  margin: 30rpx 0;
+  margin: 50rpx 0 0 0;
 }
 
 .sum {
-  width: 100%;
   height: 100rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+  background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+  /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
+  /* background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); */
+  border-radius: 10rpx;
+  padding: 0 30rpx;
 }
 
 .sum_l {
@@ -71,25 +75,31 @@
 
 .sum_r {
   color: #fff;
+  display: flex;
+  font-size: 38rpx;
 }
 
 .sum_pic {
-  width: 80rpx;
-  height: 80rpx;
+  width: 60rpx;
+  height: 60rpx;
   background-color: #F5F5F5;
   position: relative;
+  border-radius: 50%;
+  margin-left: 20rpx;
 }
 
 .sum_r image {
   width: 50rpx;
   height: 50rpx;
   position: absolute;
+  left: 5rpx;
+  top: 10%;
+
 }
 
 /* 签到部分 */
 .sign {
-  width: 100%;
-  margin: 30rpx;
+  margin: 30rpx 0;
 }
 
 .sign_list {
@@ -97,31 +107,40 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
-
+  margin: 30rpx 0;
 }
-
-.sign_in {}
-
+.sign_in{
+  display: inline-block;
+  text-align: center;
+}
 .sign_title {
-  color: #999;
+  color: #333;
   text-align: right;
 }
 
 .frist_num {
-  width: 50rpx;
-  height: 50rpx;
-  background-color: #333;
+  width: 65rpx;
+  height: 65rpx;
+  background-color: #b3b0b0;
   color: #fff;
+  border-radius: 50%;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 65rpx;
+
 }
 
 .frist_title {
-  color: #333;
+  color: #666;
+  font-size: 24rpx;
+  margin-top: 11rpx;
+
 }
 
 /* 作者部分 */
 .service {
   width: 100%;
-  margin-top: 100rpx;
+  margin-top: 40rpx;
 }
 
 .serve {
@@ -134,11 +153,9 @@
 .list {
   width: 48%;
   height: 90rpx;
-  background-color: #f8f8f8;
   margin-bottom: 33rpx;
   height: 100rpx;
   border-radius: 10rpx;
-
   /* position: relative; */
 }
 
@@ -151,6 +168,7 @@
   color: #666;
   align-items: center;
   font-weight: 400;
+  background-color: #f8f8f8;
 }
 
 .icon {

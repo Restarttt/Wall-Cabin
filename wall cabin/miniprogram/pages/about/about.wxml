@@ -5,6 +5,7 @@
 		<view class="pic">
 			<image src="../../images/home/vladstudio_stay_in_touch_wallpaper.jpg"  />
 			<view class="theme"> Wall Cabin</view>
+			<view class="theme_1"> 爱生活、爱壁纸</view>
 		</view>
 	
 		<view class="wechat">
@@ -17,9 +18,9 @@
 		</view>
 			<view class="wechat">
 			<image src="../../images/exchange.png"></image>
-			<view class="title" >1546838798@qq.com</view>
+			<view class="title"  bindtap="copy_2">1546838798</view>
 		</view>
-		<view class="copy">Tips: 点击即可复制</view>
+		<view class="copy" >Tips: 点击即可复制</view>
 	</view>
 	<!-- 免责 -->
 	<view class="exemption">

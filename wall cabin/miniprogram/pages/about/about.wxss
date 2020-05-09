@@ -17,12 +17,14 @@
   height: 150rpx;
   border-radius: 10rpx;
   margin-bottom: 20rpx;
-
 }
 
 .theme {
   text-align: center;
-
+}
+.theme_1{
+  margin:  20rpx 0 0 0;
+  color: #666;
 }
 
 .name {
@@ -48,9 +50,6 @@
 .message {
   height: 700rpx;
 }
-
-
-
 .wechat {
   margin: 0 auto;
   width: 65%;
@@ -61,7 +60,6 @@
   align-items: center;
   margin-bottom: 25rpx;
 }
-
 .wechat image {
   width: 64rpx;
   height: 60rpx;

@@ -32,6 +32,18 @@ Page({
       }
     })
   },
+  copy_2(){
+    wx.setClipboardData({
+      data: '1546838798',
+      success (res) {
+        wx.getClipboardData({
+          success (res) {
+            console.log(res.data) // data
+          }
+        })
+      }
+    })
+  },
 
 
 })
