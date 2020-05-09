@@ -13,13 +13,34 @@
 	</view>
 	<!-- 积分部分 -->
 	<view class="integral">
+		<!-- 总积分 -->
 		<view class="sum">
-			<view class="sunm_l">
+			<view class="sum_l">
 				你的积分
 			</view>
 			<view class="sum_r">
-			  <view class="number"> 0</view>
-				<image></image>
+				<view class="number"> 0</view>
+				<view class="sum_pic">
+					<image src="../../images/integral.png" />
+				</view>
+			</view>
+		</view>
+		<!-- 签到 -->
+		<view class="sign">
+			<view class="sign_title">
+				签到
+			</view>
+			<view class="sign_list">
+				<view class="sign_in" wx:for="{{sign}}" wx:key="index">
+					<view class="list">
+						<view class="frist_num">
+							{{item.num}}
+						</view>
+						<view class="frist_title">
+							{{item.name}}
+						</view>
+					</view>
+				</view>
 			</view>
 		</view>
 	</view>

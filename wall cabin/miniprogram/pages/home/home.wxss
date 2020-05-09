@@ -50,6 +50,74 @@
   padding: 0;
 }
 
+/* 积分部分 */
+.integral {
+  width: 100%;
+  margin: 30rpx 0;
+}
+
+.sum {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+}
+
+.sum_l {
+  color: #fff;
+}
+
+.sum_r {
+  color: #fff;
+}
+
+.sum_pic {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #F5F5F5;
+  position: relative;
+}
+
+.sum_r image {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+}
+
+/* 签到部分 */
+.sign {
+  width: 100%;
+  margin: 30rpx;
+}
+
+.sign_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+}
+
+.sign_in {}
+
+.sign_title {
+  color: #999;
+  text-align: right;
+}
+
+.frist_num {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #333;
+  color: #fff;
+}
+
+.frist_title {
+  color: #333;
+}
+
 /* 作者部分 */
 .service {
   width: 100%;

@@ -11,7 +11,6 @@ Page({
       img: "../../images/home/collect.png",
       type: 0,
       url: '../../pages/collect/collect'
-
     }, {
       name: '最近',
       img: "../../images/home/time.png",
@@ -27,13 +26,41 @@ Page({
       img: "../../images/home/message.png",
       type: 1
     }],
+    sign: [{
+        num: '5+',
+        name: "第一天",
+      }, {
+        num: '10+',
+        name: "第二天",
+      },
+      {
+        num: '15+',
+        name: "第三天",
+      },
+      {
+        num: '20+',
+        name: "第四天",
+      },
+      {
+        num: '25+',
+        name: "第五天",
+      },
+      {
+        num: '30+',
+        name: "第六天",
+      },
+      {
+        num: '100+',
+        name: "第七天",
+      },
+    ]
   },
   onGotUserInfo() {
     wx.getSetting({
       success: (res) => {
         if (res.authSetting['scope.userInfo']) {
           this.setData({
-        
+
           })
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
