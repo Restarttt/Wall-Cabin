@@ -2,7 +2,7 @@
 Page({
   data: {
     imgurls:[
-      '../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg'
+      'http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg'
     ]
   },
   go() {
@@ -19,7 +19,7 @@ Page({
   },
   onShareAppMessage: function (res) {
     return {
-      title: "分享",
+      title: "",
       path: '../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg',
       success: function (res) {
         console.log('成功', res)
@@ -41,5 +41,11 @@ Page({
           console.log(res)
         },
       })
+  },
+  collect(){
+    wx.showToast({
+      title: '收藏成功',
+      success:'success'
+    })
   }
 })

@@ -40,21 +40,21 @@ Page({
       icon: 'success',
       duration: 2000
     })
+  },
+  openConfirm: function () {
+    this.setData({
+      dialogShow: true
+    })
+  },
+  tapDialogButton(e) {
+    this.setData({
+      dialogShow: false,
+      showOneButtonDialog: false
+    })
+  },
+  tapOneDialogButton(e) {
+    this.setData({
+      showOneButtonDialog: true
+    })
   }
-  // openConfirm: function () {
-  //   this.setData({
-  //     dialogShow: true
-  //   })
-  // },
-  // tapDialogButton(e) {
-  //   this.setData({
-  //     dialogShow: false,
-  //     showOneButtonDialog: false
-  //   })
-  // },
-  // tapOneDialogButton(e) {
-  //   this.setData({
-  //     showOneButtonDialog: true
-  //   })
-  // }
 })

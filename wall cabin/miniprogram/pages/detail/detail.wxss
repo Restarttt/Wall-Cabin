@@ -32,8 +32,9 @@
 }
 
 .number {
+  height: 30rpx;
+  line-height: 10rpx;
   padding: 0 10rpx;
-  height: 180rpx;
 }
 
 .time_b {
@@ -67,12 +68,12 @@
 .name {
   color: #fff;
   font-size: 25rpx;
-
+  font-weight: 400;
 }
 
 .down_name {
   color: #fff;
-  font-size: 23rpx;
+  font-size: 25rpx;
   margin-top: 58rpx;
 
 }
@@ -107,6 +108,6 @@ image.down {
   width: 80rpx;
   height: 80rpx;
   position: absolute;
-  left: 12rpx;
+  left: 11rpx;
   top: 11rpx;
 }

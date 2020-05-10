@@ -2,26 +2,48 @@
 <view class="detail">
 	<!-- 大图 -->
 	<view class="big">
-		<!-- <mp-gallery  img-urls="{{imgurls}}"  current="0" > -->
 		<image src="../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg" bindtap="big" />
-		<!-- </mp-gallery> -->
+		<mp-gallery img-urls="{{imgurls}}">
+		</mp-gallery>
+
 	</view>
 	<!-- 中间部分 -->
 	<view class="time">
 		<view class="time_t">
-		<view >17</view>
-		<view class="number">:</view>
-		<view >00</view>
+			<view>17</view>
+			<view class="number">:</view>
+			<view>00</view>
 		</view>
 		<view class="time_b">
-		<view class="date">5月10日</view>
-		<view class="wenk">星期日</view>
+			<view class="date">5月10日</view>
+			<view class="wenk">星期日</view>
+		</view>
+	</view>
+	<!-- 作者信息 -->
+	<view class="source">
+		<view class="img_source">
+			<view>图片来源: 网友上传</view>
+		</view>
+		<view class="author_info">
+			<view class="author">
+				<image src="" />
+				<view class="author_title"></view>
+			</view>
+			<view class="report">
+				<image src="" />
+				<view class="report_title">举报</view>
+			</view>
+		</view>
+		<!-- 标签 -->
+		<view class="tag">
+			<view class="tag_title"></view>
 		</view>
 	</view>
 	<!-- 底部 -->
 	<view class="download">
 		<view class="title">
-			<view class="home">
+			<!-- 收藏 -->
+			<view class="home" bindtap="collect">
 				<view class="icon">
 					<image src="../../images/home/collectt.png" />
 				</view>
@@ -33,7 +55,7 @@
 				</view>
 				<view class="down_name">保存</view>
 			</view>
-			<button open-type="share" plain="true" class="share" style="border: 0;pading: 0;margin: 0;width: 92rpx;">
+			<button open-type="share" plain="true" class="share" style="border: 0;pading: 0;margin: 0;width: 50rpx;">
 				<view class="icon">
 					<image src="../../images/home/share.png" />
 				</view>
