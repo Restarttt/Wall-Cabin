@@ -1,13 +1,17 @@
 /* pages/lately/lately.wxss */
 .exchage {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  padding: 20rpx 30rpx;
-  justify-content: space-between;
+  justify-content: space-between; */
+  padding: 20rpx 10rpx;
+
 }
 
 .list {
-  width: 31.333%;
+  /* width: 31.333%; */
+  width: 30.333%;
+  display: inline-block;
+  margin: 11rpx;
 }
 
 .one {
@@ -31,6 +35,9 @@
 
 }
 /* end */
+.end_title{
+  padding: 10rpx 30rpx;
+}
 .end{
   width: 90%;
   position: fixed;

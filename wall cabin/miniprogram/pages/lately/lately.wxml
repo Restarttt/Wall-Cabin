@@ -1,16 +1,18 @@
 <!--pages/lately/lately.wxml-->
 <view class="exchage">
-<!-- 列表 -->
+	<!-- 列表 -->
 	<view class="list" wx:for='{{list}}' wx:key="index">
 		<view class="one">
 			<image src="  {{item.img}}" />
 		</view>
 	</view>
-  <!-- end -->
-  <view class="end">
-    <view class="name">
-       <view class="line"></view>
-       <view class="title">IN  YOUR  AREA</view>
-    </view>  
-  </view>
+	<!-- end -->
+	<view class="end_title">
+		<view class="end">
+			<view class="name">
+				<view class="line"></view>
+				<view class="title">IN YOUR AREA</view>
+			</view>
+		</view>
+	</view>
 </view>

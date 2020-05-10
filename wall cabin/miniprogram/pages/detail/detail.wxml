@@ -2,29 +2,33 @@
 <view class="detail">
 	<!-- 大图 -->
 	<view class="big">
-		<image src="../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg" />
+		   <!-- <mp-gallery  img-urls="{{imgurls}}"  current="0"> -->
+			<image src="../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg"  bindtap="big"/>
+			<!-- </mp-gallery> -->
 	</view>
 	<!-- 底部 -->
 	<view class="download">
 		<view class="title">
-			<view class="home" >
+			<view class="home">
 				<view class="icon">
+
 					<image src="../../images/home/collectt.png" />
+
 				</view>
-				<view class="name" >收藏</view>
+				<view class="name">收藏</view>
 			</view>
 			<view class="home">
 				<view class="down_icon" bindtap="save">
-					<image src="../../images/home/download.png" class="down" />
+					<image bingtap='download' src="../../images/home/download.png" class="down" />
 				</view>
-				<view class="down_name" >保存</view>
+				<view class="down_name">保存</view>
 			</view>
-			<view class="home">
+			<button open-type="share" plain="true" class="share" style="border: 0;pading: 0;margin: 0;width: 92rpx;">
 				<view class="icon">
 					<image src="../../images/home/share.png" />
 				</view>
 				<view class="name">分享</view>
-			</view>
+			</button>
 		</view>
 	</view>
 </view>

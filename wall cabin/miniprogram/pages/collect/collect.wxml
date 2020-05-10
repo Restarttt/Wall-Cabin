@@ -4,16 +4,18 @@
 	<view class="list" wx:for='{{list}}' wx:key="index">
 		<view class="one">
 			<image src="  {{item.img}}" />
-			<view >
-				<image bindtap="delete" src="../../images/tag.png" class="tag" />
+			<view>
+				<image bindtap="delete" data-index="{{index}}" src="../../images/tag.png" class="tag" />
 			</view>
 		</view>
 	</view>
 	<!-- end -->
-	<view class="end">
-		<view class="name">
-			<view class="line"></view>
-			<view class="title">IN YOUR AREA</view>
+	<view class="end_title">
+		<view class="end">
+			<view class="name">
+				<view class="line"></view>
+				<view class="title">IN YOUR AREA</view>
+			</view>
 		</view>
 	</view>
 </view>

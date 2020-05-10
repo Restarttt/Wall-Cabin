@@ -1,9 +1,9 @@
 <!--pages/special/special.wxml-->
 <view class="special">
-	<view class="title">
+	<view class="big_title">
 		ลลิษา มโนบาล
 	</view>
-	<view class="title">
+	<view class="big_title">
 		LAlisaManoban
 	</view>
 	<!-- 照片 -->
@@ -21,6 +21,12 @@
 				</view>
 			</swiper-item>
 		</swiper>
-	</view>
-
 </view>
+		<!-- end -->
+		<view class="end">
+			<view class="name">
+				<view class="line"></view>
+				<view class="title">IN YOUR AREA</view>
+			</view>
+		</view>
+	</view>

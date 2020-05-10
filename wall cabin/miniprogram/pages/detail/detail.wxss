@@ -17,6 +17,12 @@
   height: 100%; */
 }
 
+.share {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
 .download {
   width: 100%;
   position: fixed;
@@ -30,12 +36,14 @@
   font-size: 25rpx;
 
 }
-.down_name{
+
+.down_name {
   color: #fff;
   font-size: 23rpx;
   margin-top: 58rpx;
 
 }
+
 .title {
   display: flex;
   justify-content: space-between;
@@ -47,22 +55,25 @@
   width: 40rpx;
   height: 40rpx;
 }
-.home{
+
+.home {
   position: relative;
 }
-.down_icon{
+
+.down_icon {
   width: 100rpx;
   height: 100rpx;
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
   border-radius: 50%;
   top: -62rpx;
-  left: -28rpx;  
+  left: -28rpx;
 }
-image.down{
+
+image.down {
   width: 80rpx;
   height: 80rpx;
   position: absolute;
   left: 12rpx;
-  top: 11rpx;  
+  top: 11rpx;
 }
