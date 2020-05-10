@@ -2,18 +2,28 @@
 <view class="detail">
 	<!-- 大图 -->
 	<view class="big">
-		   <!-- <mp-gallery  img-urls="{{imgurls}}"  current="0"> -->
-			<image src="../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg"  bindtap="big"/>
-			<!-- </mp-gallery> -->
+		<!-- <mp-gallery  img-urls="{{imgurls}}"  current="0" > -->
+		<image src="../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg" bindtap="big" />
+		<!-- </mp-gallery> -->
+	</view>
+	<!-- 中间部分 -->
+	<view class="time">
+		<view class="time_t">
+		<view >17</view>
+		<view class="number">:</view>
+		<view >00</view>
+		</view>
+		<view class="time_b">
+		<view class="date">5月10日</view>
+		<view class="wenk">星期日</view>
+		</view>
 	</view>
 	<!-- 底部 -->
 	<view class="download">
 		<view class="title">
 			<view class="home">
 				<view class="icon">
-
 					<image src="../../images/home/collectt.png" />
-
 				</view>
 				<view class="name">收藏</view>
 			</view>

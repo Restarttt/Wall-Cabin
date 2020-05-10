@@ -5,23 +5,56 @@ Page({
    * 页面的初始数据
    */
   data: {
+    dialogShow: false,
+    showOneButtonDialog: false,
+    buttons: [{
+      text: '取消'
+    }, {
+      text: '确定'
+    }],
+    oneButton: [{
+      text: '确定'
+    }],
     list: [{
       img: "../../images/scenery/20200504164826.jpg"
     }, {
       img: "../../images/scenery/20200504164826.jpg"
     }, {
-      img: "../../images/Lisa/lalalalis__m__91260511_523347191932890_1519412240126646988_n.jpg"
+      img: "../../images/scenery/20200504164826.jpg"
     }, {
       img: "../../images/scenery/20200504164826.jpg"
     }, {
-      img: "../../images/Lisa/lalalalis__m__91260511_523347191932890_1519412240126646988_n.jpg"
+      img: "../../images/scenery/20200504164826.jpg"
     }]
   },
-  delete(index) {
-    console.log(index)
-    this.data.list.splice(index, 1)
+  delete(e) {
+    this.data.list.splice(e.target.dataset.index, 1)
+    console.log(e)
+    console.log(e.target.dataset.index)
     this.setData({
-      list: this.data.list
+      list: this.data.list,
+      dialogShow: true
+    })
+    wx.showToast({
+      title: '取消收藏',
+      icon: 'success',
+      duration: 2000
     })
   }
+  // openConfirm: function () {
+  //   this.setData({
+  //     dialogShow: true
+  //   })
+  // },
+  // tapDialogButton(e) {
+  //   this.setData({
+  //     dialogShow: false,
+  //     showOneButtonDialog: false
+  //   })
+  // },
+  // tapOneDialogButton(e) {
+  //   this.setData({
+  //     showOneButtonDialog: true
+  //   })
+  // }
 })
