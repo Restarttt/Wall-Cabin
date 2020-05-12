@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-
-    "mp-gallery": "/miniprogram_npm/weui-miniprogram/gallery/gallery"
+    "mp-gallery": "/miniprogram_npm/weui-miniprogram/gallery/gallery",
+    "mp-actionSheet": "/miniprogram_npm/weui-miniprogram/actionsheet/actionsheet"
   }
 }

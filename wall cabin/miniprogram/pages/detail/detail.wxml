@@ -3,8 +3,8 @@
 	<!-- 大图 -->
 	<view class="big">
 		<image src="../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg" bindtap="big" />
-		<mp-gallery img-urls="{{imgurls}}">
-		</mp-gallery>
+		<!-- <mp-gallery img-urls="{{imgurls}}" show='{{show}}' >
+		</mp-gallery> -->
 
 	</view>
 	<!-- 中间部分 -->
@@ -26,17 +26,21 @@
 		</view>
 		<view class="author_info">
 			<view class="author">
-				<image src="" />
-				<view class="author_title"></view>
+				<image src="../../images//Lisa/lalalalis__m__91260511_523347191932890_1519412240126646988_n.jpg" />
+				<view class="author_title">Lalisa</view>
 			</view>
-			<view class="report">
-				<image src="" />
+			<view class="report" bindtap="report">
+				<image src="../../images/inform.png" />
 				<view class="report_title">举报</view>
+				<mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}" ext-class>
+				</mp-actionSheet>
 			</view>
 		</view>
 		<!-- 标签 -->
 		<view class="tag">
-			<view class="tag_title"></view>
+			<view class="tag_title">摄影</view>
+			<view class="tag_title">摄影</view>
+			<view class="tag_title">摄影</view>
 		</view>
 	</view>
 	<!-- 底部 -->
@@ -48,6 +52,13 @@
 					<image src="../../images/home/collectt.png" />
 				</view>
 				<view class="name">收藏</view>
+				<!-- 已收藏 -->
+				<view class="home" wx:if='11'>
+					<view class="icon">
+						<image src="../../images/home/heart1.png" />
+					</view>
+					<view class="name_click">已收藏</view>
+				</view>
 			</view>
 			<view class="home">
 				<view class="down_icon" bindtap="save">

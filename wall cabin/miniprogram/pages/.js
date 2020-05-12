@@ -1,66 +1,30 @@
 // pages/.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    showActionsheet: false,
+    groups: [{
+        text: '图片缺失、错误',
+        value: 1
+      },
+      {
+        text: '不雅内容',
+        value: 2
+      },
+      {
+        text: '版权问题',
+        type: 'warn',
+        value: 3
+      }
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  close: function () {
+    this.setData({
+      showActionsheet: false
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  btnClick(e) {
+    console.log(e)
+    this.close()
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+  report(){}
 })
