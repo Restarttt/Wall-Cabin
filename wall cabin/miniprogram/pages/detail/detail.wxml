@@ -1,11 +1,12 @@
 <!--pages/detail/detail.wxml-->
+<mp-actionSheet bindclose='close' bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}" ext-class>
+</mp-actionSheet>
 <view class="detail">
 	<!-- 大图 -->
 	<view class="big">
 		<image src="../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg" bindtap="big" />
-		<!-- <mp-gallery img-urls="{{imgurls}}" show='{{show}}' >
-		</mp-gallery> -->
-
+		<mp-gallery img-urls="{{imgurls}}" show='{{show}}'  bindbuttontap='{{bindbuttontap}}'>
+		</mp-gallery>
 	</view>
 	<!-- 中间部分 -->
 	<view class="time">
@@ -26,14 +27,12 @@
 		</view>
 		<view class="author_info">
 			<view class="author">
-				<image src="../../images//Lisa/lalalalis__m__91260511_523347191932890_1519412240126646988_n.jpg" />
+				<image src="../../images/home/default.png" />
 				<view class="author_title">Lalisa</view>
 			</view>
 			<view class="report" bindtap="report">
 				<image src="../../images/inform.png" />
 				<view class="report_title">举报</view>
-				<mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}" ext-class>
-				</mp-actionSheet>
 			</view>
 		</view>
 		<!-- 标签 -->

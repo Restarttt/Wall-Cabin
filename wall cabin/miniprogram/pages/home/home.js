@@ -6,7 +6,7 @@ Page({
     toggle: true,
     show: false,
     userName: '',
-    userImg: "../../images/home/default.png",
+    userImg: "../../images/girl.png",
     serve: [{
       name: '收藏',
       img: "../../images/home/collect.png",

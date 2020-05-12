@@ -13,38 +13,40 @@
       mode: 'aspectFill',
       list: [
         "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
-        "../../images/larger/HallwylfjelletSunset_ZH-CN9300910376_1920x1080.jpg",
+        "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
+        "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
+        "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
       ],
       icon_list: [{
-        img: "../../images/hot1.png",
+        img: "../../images/icon/TIM截图20200512181419.png",
         text: "专栏",
         url: '../special/special'
       }, {
-        img: "../../images/hot1.png",
+        img: "../../images/icon/sort.png",
         text: "排行",
         url: '../special/special'
       }, {
-        img: "../../images/hot1.png",
-        text: "最近",
+        img: "../../images/icon/face.png",
+        text: "表情",
         url: '../special/special'
       }, {
-        img: "../../images/hot1.png",
+        img: "../../images/icon/hot1.png",
         text: "热门",
         url: '../special/special'
       }, {
-        img: "../../images/hot1.png",
+        img: "../../images/icon/random.png",
         text: "随机",
         url: '../special/special'
       }, {
-        img: "../../images/hot1.png",
+        img: "../../images/icon/4K.png",
         text: "4K",
         url: '../special/special'
       }, {
-        img: "../../images/hot1.png",
+        img: "../../images/icon/pc.png",
         text: "PC",
         url: '../special/special'
       }, {
-        img: "../../images/hot1.png",
+        img: "../../images/icon/more.png",
         text: "更多",
         url: '../special/special'
       }],

@@ -68,12 +68,29 @@ Page({
   },
   // 下拉框
   report() {
-    this.setData({
-      showActionsheet: true,
+    console.log('report')
+    let a = this
+    // setTimeout(function () {
+    a.setData({
+      showActionsheet: true
     })
+    // }, 3000)
   },
   btnClick(e) {
     console.log(e)
-    this.report()
+    if (e.detail.index <= 1) {
+      wx.showToast({
+        title: '举报成功',
+        success: 'success'
+      })
+    }else{
+      
+    }
+  },
+  close() {
+    console.log('close')
+    this.setData({
+      showActionsheet: false
+    })
   }
 })
