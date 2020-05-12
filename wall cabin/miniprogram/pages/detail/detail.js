@@ -5,7 +5,6 @@ Page({
       'http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg',
     ],
     show: false,
-    showActionsheet: false,
     groups: [{
         text: '图片缺失',
         value: 1
@@ -46,19 +45,19 @@ Page({
     }
   },
   // 点击出大图
-  // big() {
-  //   this.setData({
-  //     show: true
-  //   })
-  // }
   big() {
-    console.log(11)
-    wx.previewImage({
-      current: 'http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg', // 当前显示图片的http链接
-      urls: ['http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg'] // 需要预览的图片http链接列表
+    this.setData({
+      show: true
     })
-    console.log(22)
   },
+  // big() {
+  //   console.log(11)
+  //   wx.previewImage({
+  //     current: 'http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg', // 当前显示图片的http链接
+  //     urls: ['http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg'] // 需要预览的图片http链接列表
+  //   })
+  //   console.log(22)
+  // },
   // 收藏按钮
   collect() {
     wx.showToast({
@@ -78,13 +77,14 @@ Page({
   },
   btnClick(e) {
     console.log(e)
-    if (e.detail.index <= 1) {
+    if (e.detail.index <= 2) {
       wx.showToast({
         title: '举报成功',
-        success: 'success'
+        success: 'success',
       })
-    }else{
-      
+      this.setData({
+        showActionsheet: false
+      })
     }
   },
   close() {

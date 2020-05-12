@@ -14,8 +14,8 @@
 				<image src="../../images/scenery/dot.png" />
 			</view>
 		</view>
-		<swiper display-multiple-items="{{displayMultipleItems}}">
-			<swiper-item wx:for='{{item.list}}' wx:key='index'>
+		<swiper display-multiple-items="{{displayMultipleItems}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<swiper-item wx:for='{{item.list}}' wx:key='index' >
 				<view class="one">
 					<image src="{{item.img}}" mode="{{mode}}" />
 				</view>

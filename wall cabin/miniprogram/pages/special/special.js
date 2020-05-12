@@ -4,6 +4,9 @@ const app = getApp()
 Page({
   data: {
     displayMultipleItems: 1,
+    autoplay: true,
+    interval: "3000",
+    duration: "1000",
     lisa:[ {
       name: '日常',
       mode: 'aspectFill',
