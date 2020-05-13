@@ -91,7 +91,8 @@
   position: absolute;
   top: 0rpx;
   left: -1rpx;
-  width: 72rpx;
+  width: 80rpx;
+
 }
 
 .name_click {
@@ -116,7 +117,8 @@
 
 .home {
   position: relative;
-  width: 72rpx;
+  width: 80rpx;
+
 }
 
 .down_icon {
@@ -217,4 +219,57 @@ image.down {
   color: #40E0D0;
   font-size: 22rpx;
   border-radius: 50rpx;
+}
+
+/* 联系客服 */
+.relation {
+  position: fixed;
+  width: 100vw;
+  height: 194vw;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.relation_btn {
+  width: 400rpx;
+  height: 220rpx;
+  margin: 55% auto;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  color: #000;
+  text-align: center;
+  padding: 50rpx;
+}
+
+.service_btn {
+  height: 60rpx;
+  padding: 0;
+  width: 165px;
+  border-radius: 50rpx;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  margin-top: 30rpx;
+  
+}
+
+.button-hover {
+  background-color: #fff;
+}
+
+.skip {
+  font-weight: 400;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+.cancal{
+  position: absolute;
+  bottom: -37%;
+  left: 44%;  
+}
+.cancal image{
+  width: 60rpx;
+  height: 60rpx;
 }

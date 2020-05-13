@@ -5,8 +5,10 @@ Page({
       'http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg',
     ],
     show: false,
+    showActionsheet: false,
     collect_show: false,
     collect_hidden: true,
+    service: false,
     groups: [{
         text: '图片缺失',
         value: 1
@@ -64,7 +66,7 @@ Page({
         title: '收藏成功',
         success: 'success'
       })
-    } else if(this.data.collect_hidden === true) {
+    } else if (this.data.collect_hidden === true) {
       wx.showToast({
         title: '取消收藏',
         success: 'success'
@@ -85,7 +87,7 @@ Page({
   },
   btnClick(e) {
     console.log(e)
-    if (e.detail.index <= 2) {
+    if (e.detail.index <= 1) {
       wx.showToast({
         title: '举报成功',
         success: 'success',
@@ -93,6 +95,12 @@ Page({
       this.setData({
         showActionsheet: false
       })
+    } else {
+      this.setData({
+        service: true,
+        showActionsheet: false
+      })
+
     }
   },
   close() {
@@ -100,5 +108,11 @@ Page({
     this.setData({
       showActionsheet: false
     })
+  },
+  cancal() {
+    this.setData({
+      service: false,
+    })
+
   }
 })

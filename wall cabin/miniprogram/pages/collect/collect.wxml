@@ -1,5 +1,5 @@
 <!--pages/collect/collect.wxml-->
-<mp-dialog title="收藏" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+<mp-dialog title="收藏" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}" wx:for='{{list}}' wx:key="index" data-index="{{index}}">
 	<view>确认取消收藏</view>
 </mp-dialog>
 <view class="collect">
@@ -8,7 +8,7 @@
 		<view class="one">
 			<image src="  {{item.img}}" />
 			<view>
-				<image bindtap="delete" data-index="{{index}}" src="../../images/tag.png" class="tag" />
+				<image bindtap="delete"  src="../../images/tag.png" class="tag" />
 			</view>
 		</view>
 	</view>

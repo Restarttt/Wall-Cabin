@@ -18,7 +18,7 @@
         "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
       ],
       icon_list: [{
-        img: "../../images/icon/TIM截图20200512181419.png",
+        img: "../../images/icon/specially.png",
         text: "专栏",
         url: '../special/special'
       }, {
