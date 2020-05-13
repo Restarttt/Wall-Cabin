@@ -1,4 +1,3 @@
-
 /* pages/detail/detail.wxss */
 
 .detail {
@@ -84,6 +83,29 @@
   display: flex;
   justify-content: space-between;
   padding: 20rpx 60rpx;
+  position: relative;
+}
+
+/* 已收藏样式 */
+.already {
+  position: absolute;
+  top: 0rpx;
+  left: -1rpx;
+  width: 72rpx;
+}
+
+.name_click {
+  color: #DC143C;
+  font-size: 25rpx;
+  font-weight: 400;
+  position: relative;
+  left: -7rpx;
+
+}
+
+.already .icon image {
+  width: 48rpx;
+  height: 40rpx
 }
 
 /* X小图标 */
@@ -94,6 +116,7 @@
 
 .home {
   position: relative;
+  width: 72rpx;
 }
 
 .down_icon {
@@ -113,30 +136,30 @@ image.down {
   left: 11rpx;
   top: 11rpx;
 }
+
 /* 作者信息 */
-.source{
-  padding: 20rpx  20rpx  50rpx ;
+.source {
+  padding: 20rpx 20rpx 50rpx;
   border-bottom: 2rpx solid #cdcdcd;
   margin-bottom: 300rpx;
-
-
 }
-.img_source{
+
+.img_source {
   color: #cdcdcd;
   font-size: 28rpx;
   margin-bottom: 20rpx;
-  
+
 }
-.author_info{
+
+.author_info {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20rpx;
-
 }
 
-.author image{
+.author image {
   width: 75rpx;
   height: 75rpx;
   border-radius: 50%;
@@ -144,31 +167,54 @@ image.down {
   vertical-align: middle;
 
 }
-.author_title{
+
+.author_title {
   color: rgb(91, 91, 91);
   display: inline-block;
 
 }
-.report image{
+
+.report image {
   width: 40rpx;
   height: 40rpx;
-  margin-right:10rpx;
+  margin-right: 10rpx;
   vertical-align: middle;
 
 }
-.report_title{
+
+.report_title {
   color: #cdcdcd;
   font-size: 28rpx;
   display: inline-block;
 }
-.tag{
+
+.tag {
   display: flex;
 }
-.tag_title{
-  border: 2rpx solid #d81e06;
+
+.tag_title1 {
+  border: 2rpx solid #DC143C;
   padding: 4rpx 25rpx;
   margin-right: 20rpx;
-  color: #d81e06;
+  color: #DC143C;
+  font-size: 22rpx;
+  border-radius: 50rpx;
+}
+
+.tag_title2 {
+  border: 2rpx solid #FFD700;
+  padding: 4rpx 25rpx;
+  margin-right: 20rpx;
+  color: #FFD700;
+  font-size: 22rpx;
+  border-radius: 50rpx;
+}
+
+.tag_title3 {
+  border: 2rpx solid #40E0D0;
+  padding: 4rpx 25rpx;
+  margin-right: 20rpx;
+  color: #40E0D0;
   font-size: 22rpx;
   border-radius: 50rpx;
 }

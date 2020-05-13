@@ -5,6 +5,8 @@ Page({
       'http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg',
     ],
     show: false,
+    collect_show: false,
+    collect_hidden: true,
     groups: [{
         text: '图片缺失',
         value: 1
@@ -50,27 +52,33 @@ Page({
       show: true
     })
   },
-  // big() {
-  //   console.log(11)
-  //   wx.previewImage({
-  //     current: 'http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg', // 当前显示图片的http链接
-  //     urls: ['http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg'] // 需要预览的图片http链接列表
-  //   })
-  //   console.log(22)
-  // },
   // 收藏按钮
   collect() {
-    wx.showToast({
-      title: '收藏成功',
-      success: 'success'
+    console.log(this.data.collect_show)
+    this.setData({
+      collect_show: !(this.data.collect_show),
+      collect_hidden: !(this.data.collect_hidden)
     })
+    if (this.data.collect_show === true) {
+      wx.showToast({
+        title: '收藏成功',
+        success: 'success'
+      })
+    } else if(this.data.collect_hidden === true) {
+      wx.showToast({
+        title: '取消收藏',
+        success: 'success'
+      })
+
+    }
+
   },
   // 下拉框
   report() {
     console.log('report')
-    let a = this
+    // let a = this
     // setTimeout(function () {
-    a.setData({
+    this.setData({
       showActionsheet: true
     })
     // }, 3000)

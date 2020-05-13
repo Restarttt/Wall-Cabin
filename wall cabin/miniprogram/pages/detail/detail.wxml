@@ -1,7 +1,7 @@
 <!--pages/detail/detail.wxml-->
-<mp-gallery img-urls="{{imgurls}}" show='{{show}}'  bindbuttontap='{{bindbuttontap}}'>
-		</mp-gallery>
-<mp-actionSheet bindclose='close' bindactiontap="btnClick" actions="{{groups}}" ext-class>
+<mp-gallery img-urls="{{imgurls}}" show='{{show}}' bindbuttontap='{{bindbuttontap}}'>
+</mp-gallery>
+<mp-actionSheet bindclose='close' bindactiontap="btnClick" actions="{{groups}}" >
 </mp-actionSheet>
 <view class="detail">
 	<!-- 大图 -->
@@ -37,9 +37,9 @@
 		</view>
 		<!-- 标签 -->
 		<view class="tag">
-			<view class="tag_title">摄影</view>
-			<view class="tag_title">摄影</view>
-			<view class="tag_title">摄影</view>
+			<view class="tag_title1">摄影</view>
+			<view class="tag_title2">风景</view>
+			<view class="tag_title3">纯色</view>
 		</view>
 	</view>
 	<!-- 底部 -->
@@ -47,17 +47,19 @@
 		<view class="title">
 			<!-- 收藏 -->
 			<view class="home" bindtap="collect">
-				<view class="icon">
-					<image src="../../images/home/collectt.png" />
+				<view wx:if='{{collect_hidden}}'>
+					<view class="icon" >
+						<image src="../../images/home/collectt.png" />
+					</view>
+					<view class="name">收藏</view>
 				</view>
-				<view class="name">收藏</view>
 				<!-- 已收藏 -->
-				<!-- <view class="home" wx:if='11'>
+				<view class="already" wx:if='{{collect_show}}'>
 					<view class="icon">
 						<image src="../../images/home/heart1.png" />
 					</view>
 					<view class="name_click">已收藏</view>
-				</view> -->
+				</view>
 			</view>
 			<view class="home">
 				<view class="down_icon" bindtap="save">
