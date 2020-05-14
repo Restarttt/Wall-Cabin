@@ -11,12 +11,7 @@
       interval: "3000",
       duration: "1000",
       mode: 'aspectFill',
-      list: [
-        "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
-        "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
-        "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
-        "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
-      ],
+      list: [],
       icon_list: [{
         img: "../../images/icon/specially.png",
         text: "专栏",
@@ -175,5 +170,18 @@
       wx.navigateTo({
         url: '../../pages/detail/detail',
       })
-    }
+      wx.cloud.callFunction({
+        name:'sum',
+        data:{},  success: res => {
+          console.log(res),
+          console.log(res.result.list)
+          this.setData({
+            list: res.result.list
+          })
+        },
+        fail: err => {
+          console.log(err)
+        }
+      })
+    },
   })
