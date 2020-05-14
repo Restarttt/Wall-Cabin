@@ -71,9 +71,34 @@ Page({
         title: '取消收藏',
         success: 'success'
       })
-
     }
-
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {
+        a: 1,
+        b: 2
+      },
+      success: res => {
+        console.log(' 成功 :', res)
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
+    wx.cloud.callFunction({
+      name: 'sum',
+      data: {
+        x: 1,
+        y: 2,
+        name:'zh'
+      },
+      success: res => {
+        console.log(' 成功sum :', res)
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
   },
   // 下拉框
   report() {
