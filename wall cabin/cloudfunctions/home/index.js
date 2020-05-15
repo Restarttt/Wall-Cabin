@@ -20,19 +20,6 @@ exports.main = async (event, context) => {
       "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
       "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
       "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg"
-    ],
-    sec: [{
-      img: '../../images/scenery/20200504164826.jpg'
-    }, {
-      img: '../../images/scenery/20200504164826.jpg'
-    }, {
-      img: '../../images/scenery/20200504164826.jpg'
-    }, {
-      img: '../../images/scenery/20200504164826.jpg'
-    }, {
-      img: '../../images/scenery/20200504164826.jpg'
-    }, {
-      img: '../../images/scenery/20200504164826.jpg'
-    }]
+    ]
   }
 }
