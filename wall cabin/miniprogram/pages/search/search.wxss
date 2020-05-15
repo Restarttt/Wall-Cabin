@@ -1,6 +1,7 @@
 /* search wxss */
 .search {
   padding: 20rpx 30rpx;
+ 
 }
 
 input {
@@ -37,7 +38,7 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30rpx;
+  margin: 20rpx 30rpx;
 }
 
 .lately_name {
@@ -50,16 +51,18 @@ input {
   height: 40rpx;
 
 }
-
+.key{
+  margin-left: 20rpx;
+}
 .key_name {
   display: inline-block;
-  width: 10%;
+  width: 9%;
   padding: 10rpx 25rpx;
-  background-color: blanchedalmond;
+  background-color: #f3f4f5;
   text-align: center;
-  border-radius: -43rpx;
+  border-radius: 8rpx;
   font-size: 25rpx;
-  color: #333;
-  margin: 0 19rpx 20rpx 0;
+  color: #7b7b7b;
+  margin: 15rpx ;
 
 }

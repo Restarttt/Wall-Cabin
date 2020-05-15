@@ -5,32 +5,32 @@
 		<image src="../../images/glass.png" />
 	</view>
 	</input>
-	<!-- 关键字 -->
-	<view class="keyword">
-		<!-- 最近 -->
-		<view class="lately_search">
-			<view class="lately">
-				<view class="lately_name">
-					{{late}}
-				</view>
-				<view class="lately_img">
-					<image src="../../images/home/trash.png" />
-				</view>
-			</view>
-		</view>
-		<view class="key">
-			<view class="key_name">文字</view>
-		</view>
-	</view>
-	<!-- 热门 -->
+</view>
+<!-- 关键字 -->
+<view class="keyword">
+	<!-- 最近 -->
 	<view class="lately_search">
 		<view class="lately">
 			<view class="lately_name">
-				{{hot}}
+				{{late}}
+			</view>
+			<view class="lately_img" bindtap="detele">
+				<image src="../../images/home/trash.png"  />
 			</view>
 		</view>
 	</view>
 	<view class="key">
-		<view class="key_name" wx:for="{{hot_list}}" wx:key="index">{{item}}</view>
+		<view class="key_name"   wx:for='{{word}}' wx:key='index' data-index="{{index}}">{{item}}</view>
 	</view>
+</view>
+<!-- 热门 -->
+<view class="lately_search">
+	<view class="lately">
+		<view class="lately_name">
+			{{hot}}
+		</view>
+	</view>
+</view>
+<view class="key">
+	<view class="key_name" wx:for="{{hot_list}}" wx:key="index">{{item}}</view>
 </view>

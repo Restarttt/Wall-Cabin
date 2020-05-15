@@ -7,17 +7,7 @@ Page({
     }, {
       text: '确定',
     }],
-    list: [{
-      img: "../../images/scenery/20200504164826.jpg"
-    }, {
-      img: "../../images/scenery/20200504164826.jpg"
-    }, {
-      img: "../../images/scenery/20200504164826.jpg"
-    }, {
-      img: "../../images/scenery/20200504164826.jpg"
-    }, {
-      img: "../../images/scenery/20200504164826.jpg"
-    }]
+    list: []
   },
   tapDialogButton(e) {
     console.log(e)
@@ -43,6 +33,22 @@ Page({
   delete(e) {
     this.setData({
       dialogShow: true
+    })
+  },
+  onLoad: function (options) {
+    wx.cloud.callFunction({
+      name: 'collect',
+      data: {},
+      success: res => {
+        // console.log(res)
+        // console.log('collcet', res.result.list)
+        this.setData({
+          list: res.result.list,
+        })
+      },
+      fail: err => {
+        console.log(err)
+      }
     })
   }
 })

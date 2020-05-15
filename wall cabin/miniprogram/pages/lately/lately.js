@@ -5,27 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: [{
-      img: "../../images/scenery/20200504164826.jpg"
-    }, {
-      img: "../../images/scenery/20200504164826.jpg"
-    }, {
-      img: "../../images/scenery/20200504164826.jpg"
-    }, {
-      img: "../../images/scenery/20200504164826.jpg"
-    }, {
-      img: "../../images/scenery/20200504164826.jpg"
-    },{img: "../../images/scenery/20200504164826.jpg"
-  }
-
-  ]
-
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.cloud.callFunction({
+      name: 'lately',
+      data: {},
+      success: res => {
+        // console.log(res)
+        this.setData({
+          list: res.result.list,
+        })
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
 
   },
 

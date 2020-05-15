@@ -1,6 +1,9 @@
 // pages/detail/detail.js
 Page({
   data: {
+    name: '',
+    title: [],
+    img: '',
     imgurls: [
       'http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg',
     ],
@@ -72,33 +75,6 @@ Page({
         success: 'success'
       })
     }
-    wx.cloud.callFunction({
-      name: 'login',
-      data: {
-        a: 1,
-        b: 2
-      },
-      success: res => {
-        console.log(' 成功 :', res)
-      },
-      fail: err => {
-        console.log(err)
-      }
-    })
-    wx.cloud.callFunction({
-      name: 'sum',
-      data: {
-        x: 1,
-        y: 2,
-        name:'zh'
-      },
-      success: res => {
-        console.log(' 成功sum :', res)
-      },
-      fail: err => {
-        console.log(err)
-      }
-    })
   },
   // 下拉框
   report() {
@@ -125,7 +101,6 @@ Page({
         service: true,
         showActionsheet: false
       })
-
     }
   },
   close() {
@@ -138,6 +113,23 @@ Page({
     this.setData({
       service: false,
     })
-
+  },
+  onLoad: function (options) {
+    wx.cloud.callFunction({
+      name: 'detail',
+      data: {},
+      success: res => {
+        console.log(res)
+        console.log(res.result.tag)
+        this.setData({
+          img: res.result.img,
+          name: res.result.name,
+          title: res.result.tag,
+        })
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
   }
 })
