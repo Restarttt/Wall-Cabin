@@ -10,19 +10,29 @@ exports.main = async (event, context) => {
   console.log(event)
   console.log(context)
   const wxContext = cloud.getWXContext()
-  const a = event.x + event.y
   return {
     event,
     openid: wxContext.OPENID,
     appid: wxContext.APPID,
     unionid: wxContext.UNIONID,
-    name: 'zzz',
-    sum: a,
     list: [
       "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
       "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
       "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
-      "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg",
-    ]
+      "../../images/larger/FinWhale_ZH-CN9010064973_1920x1080.jpg"
+    ],
+    sec: [{
+      img: '../../images/scenery/20200504164826.jpg'
+    }, {
+      img: '../../images/scenery/20200504164826.jpg'
+    }, {
+      img: '../../images/scenery/20200504164826.jpg'
+    }, {
+      img: '../../images/scenery/20200504164826.jpg'
+    }, {
+      img: '../../images/scenery/20200504164826.jpg'
+    }, {
+      img: '../../images/scenery/20200504164826.jpg'
+    }]
   }
 }

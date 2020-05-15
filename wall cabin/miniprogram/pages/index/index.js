@@ -49,43 +49,17 @@
           back: "../../images/scenery/back1.png",
           dot: '../../images/scenery/dot.png',
           name: "风景",
-          list: [{
-            img: '../../images/scenery/20200504164826.jpg'
-          }, {
-            img: '../../images/scenery/20200504164826.jpg'
-          }, {
-            img: '../../images/scenery/20200504164826.jpg'
-          }, {
-            img: '../../images/scenery/20200504164826.jpg'
-          }, {
-            img: '../../images/scenery/20200504164826.jpg'
-          }, {
-            img: '../../images/scenery/20200504164826.jpg'
-          }]
+          list: [
+            {
+              img: '../../images/scenery/20200504164826.jpg'
+            },
+          ]
         },
         {
           back: "../../images/scenery/back1.png",
           dot: '../../images/scenery/dot.png',
           name: "创意",
-          list: [{
-              img: '../../images/scenery/20200504164826.jpg'
-            },
-            {
-              img: '../../images/scenery/20200504164826.jpg'
-            },
-            {
-              img: '../../images/scenery/20200504164826.jpg'
-            },
-            {
-              img: '../../images/scenery/20200504164826.jpg'
-            },
-            {
-              img: '../../images/scenery/20200504164826.jpg'
-            },
-            {
-              img: '../../images/scenery/20200504164826.jpg'
-            },
-          ]
+          list: []
         }, {
           back: "../../images/scenery/back1.png",
           dot: '../../images/scenery/dot.png',
@@ -157,7 +131,6 @@
             },
           ]
         },
-
       ]
     },
     back() {
@@ -167,21 +140,29 @@
       })
     },
     go() {
+     
       wx.navigateTo({
         url: '../../pages/detail/detail',
       })
+    },
+    onLoad: function (options) {
+      const frist = this.data.scenery[0].list
       wx.cloud.callFunction({
-        name:'sum',
-        data:{},  success: res => {
-          console.log(res),
-          console.log(res.result.list)
-          this.setData({
-            list: res.result.list
-          })
+        name: 'home',
+        data: {},
+        success: res => {
+          console.log(res)
+          console.log('res', frist)
+          console.log('back', res.result.sec)
+            this.setData({
+              list: res.result.list,
+              frist: res.result.sec
+            })
         },
         fail: err => {
           console.log(err)
         }
       })
     },
+
   })

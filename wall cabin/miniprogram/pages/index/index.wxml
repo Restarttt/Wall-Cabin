@@ -2,7 +2,7 @@
 <view class="find">
 	<view class="top-pic">
 		<!-- 顶部的循环播放图片 -->
-		<swiper autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}" interval="{{interval}}" >
+		<swiper autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}" interval="{{interval}}" bindtap="go">
 			<swiper-item wx:for="{{list}}" wx:key="index">
 				<view class="logo">
 					<image src="{{item}}" mode="{{mode}}" />
@@ -26,8 +26,8 @@
 		</view>
 	</view>
 	<!-- 风景模块 -->
-	<view class="scenery" wx:for="{{scenery}}" wx:key="index">
-		<view class="scenery_top">
+	<view class="scenery" wx:for="{{scenery}}"  wx:key="index" >
+		<view class="scenery_top" >
 			<view class="back" bindtap="back">
 				<image src="{{item.back}}" />
 				<text></text>
@@ -38,9 +38,9 @@
 			</view>
 		</view>
 		<view class="scenety_bottom">
-				<view class="scenety_list" wx:for="{{item.list}}" wx:key="index" bindtap="go">
-					<image src=" {{item.img}}" mode="{{mode}}" />
-				</view>
+			<view class="scenety_list" wx:for="{{item.list}}" wx:key="index" bindtap="go"  >
+				<image src=" {{item.img}}" mode="{{mode}}"    />
+			</view>
 		</view>
 	</view>
 </view>
