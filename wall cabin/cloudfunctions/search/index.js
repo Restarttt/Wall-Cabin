@@ -3,12 +3,15 @@ const cloud = require('wx-server-sdk')
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
-
 })
-
+const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
+  const test = await db.collection('grade').where({
+    name: 'Lalisa'
+  }).get()
+  console.log(test)
 
   return {
     event,
@@ -23,6 +26,10 @@ exports.main = async (event, context) => {
       '创意',
       '动漫',
       '性感'
-    ]
+    ],
+    word:[
+      '文字'
+    ],
+    test: test.data
   }
 }

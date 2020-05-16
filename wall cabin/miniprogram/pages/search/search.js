@@ -6,7 +6,7 @@ Page({
     focus: true,
     late: '最近搜索',
     hot: '热门搜索',
-    word: ['文字'],
+    word: [],
     hot_list: [],
   },
   detele(e) {
@@ -21,9 +21,10 @@ Page({
       name: 'search',
       data: {},
       success: res => {
-        console.log(res)
+        console.log(res.result)
         this.setData({
           hot_list: res.result.list,
+          word: res.result.word
         })
       },
       fail: err => {
