@@ -5,7 +5,7 @@
 		<swiper autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}" interval="{{interval}}" bindtap="go">
 			<swiper-item wx:for="{{list}}" wx:key="index">
 				<view class="logo">
-					<image src="{{item}}" mode="{{mode}}" />
+					<image src="{{item.ID}}" mode="{{mode}}" />
 				</view>
 			</swiper-item>
 		</swiper>
@@ -39,7 +39,7 @@
 		</view>
 		<view class="scenety_bottom">
 			<view class="scenety_list" wx:for="{{item.list}}" wx:key="index" bindtap="go"  >
-				<image src=" {{item.img}}" mode="{{mode}}"    />
+				<image  src="{{item.file_id}}" mode="{{mode}}"    />
 			</view>
 		</view>
 	</view>

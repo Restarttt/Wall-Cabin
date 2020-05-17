@@ -16,15 +16,12 @@ exports.main = async (event, context) => {
     unionid: wxContext.UNIONID,
     tag: [{
         name: '摄影',
-        type: 1
       },
       {
         name: '风景',
-        type: 2
       },
       {
         name: '颜色 ',
-        type: 3
       },
     ],
     name: 'Lalisa',

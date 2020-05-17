@@ -14,6 +14,7 @@ Page({
       name: 'Lalisa',
       data: {},
       success: res => {
+        console.log(res)
         this.setData({
           lisa: res.result.list,
         })

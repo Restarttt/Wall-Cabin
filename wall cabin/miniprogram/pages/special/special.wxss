@@ -38,7 +38,7 @@
 
 swiper {
   width: 100%;
-  height: 241px;
+  height: 920rpx;
   border-radius: 10rpx;
   overflow: hidden;
   transform: translateY(0);
@@ -48,7 +48,6 @@ swiper {
 
 .swiper-item {
   width: 31.333%;
-  height: 385rpx;
   margin-bottom: 20rpx;
 }
 
@@ -59,6 +58,7 @@ swiper {
 
 .one image {
   width: 100%;
+  height: 100%;
   border-radius: 8rpx;
 }
 

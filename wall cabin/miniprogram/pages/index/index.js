@@ -64,6 +64,7 @@ Page({
       data: {},
       success: res => {
         // console.log(res)
+        // console.log(res.result.list)
         this.setData({
           list: res.result.list,
         })
@@ -76,8 +77,7 @@ Page({
       name: 'scenery',
       data: {},
       success: res => {
-        // console.log(res)
-        // console.log('back', res.result.scenery)
+        console.log(res)
         this.setData({
           scenery: res.result.scenery
         })
