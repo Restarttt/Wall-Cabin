@@ -28,6 +28,10 @@ exports.main = async (event, context) => {
     type: 'grayscale'
   }).get()
 
+  const shadow = await db.collection('picture').where({
+    type: 'shadow'
+  }).get()
+
   return {
     event,
     openid: wxContext.OPENID,
@@ -44,7 +48,7 @@ exports.main = async (event, context) => {
     }, {
       name: '背影',
       mode: 'aspectFill',
-      list: []
+      list: shadow.data
     }, {
       name: '舞台',
       mode: 'aspectFill',
