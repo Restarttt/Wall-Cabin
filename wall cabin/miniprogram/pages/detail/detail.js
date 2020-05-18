@@ -57,10 +57,13 @@ Page({
     })
   },
   // 点击出大图
-  big() {
+  big(e) {
+    console.log(e)
+    const that = this
+    const fileid = e.target.dataset.img
     wx.previewImage({
-      current: 'cloud://wallcabin-qvly1.7761-wallcabin-qvly1-1302025482/architecture/3879e984a77928f4b73bd7dc85f1f49.jpg', // 当前显示图片的http链接
-      urls: ["cloud://wallcabin-qvly1.7761-wallcabin-qvly1-1302025482/architecture/3879e984a77928f4b73bd7dc85f1f49.jpg"] // 需要预览的图片http链接列表
+      current: fileid, // 当前显示图片的http链接
+      urls: [that.data.img] // 需要预览的图片http链接列表
     })
     // this.setData({
     //   show: true
@@ -142,5 +145,12 @@ Page({
         console.log(err)
       }
     })
+    wx.showLoading({
+      title: 'loading',
+    })
+    
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 1000)
   }
 })

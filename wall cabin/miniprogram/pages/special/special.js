@@ -7,9 +7,9 @@ Page({
     autoplay: false,
     interval: "3000",
     duration: "1000",
-    lisa:[]
+    lisa: []
   },
-  go(e){
+  go(e) {
     console.log('file_id==', e.target.dataset.item)
     const id = e.target.dataset.item
     console.log('id==', id)
@@ -30,6 +30,10 @@ Page({
       fail: err => {
         console.log(err)
       }
+    })
+    wx.showToast({
+      title: '图片均可滑动',
+      duration: 10000
     })
   }
 
