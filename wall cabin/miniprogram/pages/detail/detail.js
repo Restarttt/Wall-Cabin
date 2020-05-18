@@ -4,10 +4,8 @@ Page({
     name: '',
     title: [],
     img: '',
-    imgurls: [
-      'http://img5.imgtn.bdimg.com/it/u=3512607595,3037015550&fm=26&gp=0.jpg',
-    ],
-    show: false,
+    // imgurls: [''],
+    // show: false,
     showActionsheet: false,
     collect_show: false,
     collect_hidden: true,
@@ -22,7 +20,6 @@ Page({
       },
       {
         text: '版权问题',
-        // type: 'warn',
         value: 3
       }
     ]
@@ -51,11 +48,23 @@ Page({
       }
     }
   },
+  // 点击保存到系统相册
+  save() {
+    wx.saveImageToPhotosAlbum({
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
   // 点击出大图
   big() {
-    this.setData({
-      show: true
+    wx.previewImage({
+      current: 'cloud://wallcabin-qvly1.7761-wallcabin-qvly1-1302025482/architecture/3879e984a77928f4b73bd7dc85f1f49.jpg', // 当前显示图片的http链接
+      urls: ["cloud://wallcabin-qvly1.7761-wallcabin-qvly1-1302025482/architecture/3879e984a77928f4b73bd7dc85f1f49.jpg"] // 需要预览的图片http链接列表
     })
+    // this.setData({
+    //   show: true
+    // })
   },
   // 收藏按钮
   collect() {
@@ -117,14 +126,16 @@ Page({
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'detail',
-      data: {},
+      data: {
+        file: options.fileid
+      },
       success: res => {
-        console.log(res)
-        console.log(res.result.tag)
+        // console.log(res)
+        // console.log(res.result.list[0])
         this.setData({
-          img: res.result.img,
-          name: res.result.name,
-          title: res.result.tag,
+          img: options.fileid,
+          name: res.result.list[0],
+          title: res.result.list[0],
         })
       },
       fail: err => {

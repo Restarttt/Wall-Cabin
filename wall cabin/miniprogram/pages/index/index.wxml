@@ -38,8 +38,8 @@
 			</view>
 		</view>
 		<view class="scenety_bottom">
-			<view class="scenety_list" wx:for="{{item.list}}" wx:key="index" bindtap="go"  >
-				<image  src="{{item.file_id}}" mode="{{mode}}"    />
+			<view class="scenety_list" wx:for="{{item.list}}" wx:key="index"  >
+				<image  src="{{item.file_id}}" mode="{{mode}}" bindtap="go" data-item="{{item.file_id}}"   />
 			</view>
 		</view>
 	</view>

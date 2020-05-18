@@ -1,5 +1,5 @@
 <!--pages/collect/collect.wxml-->
-<mp-dialog title="收藏" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}" wx:for='{{list}}' wx:key="index" data-index="{{index}}">
+<mp-dialog title="收藏" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}" wx:for='{{list}}' wx:key="index" data-index="{{index}}" data-list="{{list}}">
 	<view>确认取消收藏</view>
 </mp-dialog>
 <view class="collect">

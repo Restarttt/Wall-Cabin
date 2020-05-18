@@ -17,7 +17,7 @@
 		<swiper display-multiple-items="{{displayMultipleItems}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
 			<swiper-item wx:for='{{item.list}}' wx:key='index' >
 				<view class="one">
-					<image src="{{item.file_id}}" mode="{{mode}}" />
+					<image src="{{item.file_id}}" mode="{{mode}}" bindtap="go" data-item="{{item.file_id}}" />
 				</view>
 			</swiper-item>
 		</swiper>

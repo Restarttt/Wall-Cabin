@@ -15,6 +15,7 @@ Page({
       this.data.list.splice(e.target.dataset.index, 1)
       console.log(e)
       console.log(e.target.dataset.index)
+      console.log(e.target.dataset.list)
       this.setData({
         dialogShow: false,
         list: this.data.list,

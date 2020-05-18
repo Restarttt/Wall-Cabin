@@ -1,6 +1,6 @@
 <!--pages/detail/detail.wxml-->
-<mp-gallery img-urls="{{imgurls}}" show='{{show}}' bindbuttontap='{{bindbuttontap}}'>
-</mp-gallery>
+<!-- <mp-gallery img-urls="{{imgurls}}" show='{{show}}' bindbuttontap='{{bindbuttontap}}'>
+</mp-gallery> -->
 <mp-actionSheet bindclose='close' bindactiontap="btnClick" actions="{{groups}}" show="{{showActionsheet}}">
 </mp-actionSheet>
 <view class="detail">
@@ -23,12 +23,12 @@
 	<!-- 作者信息 -->
 	<view class="source">
 		<view class="img_source">
-			<view>图片来源: 网友上传</view>
+			<!-- <view>图片来源: 网友上传</view> -->
 		</view>
 		<view class="author_info">
 			<view class="author">
 				<image src="../../images/home/default.png" />
-				<view class="author_title">{{name}}</view>
+				<view class="author_title">{{name.author}}</view>
 			</view>
 			<view class="report" bindtap="report">
 				<image src="../../images/inform.png" />
@@ -37,7 +37,7 @@
 		</view>
 		<!-- 标签 -->
 		<view class="tag">
-			<view class="{{ index == 0 ? 'tag_title1' : '' || index == 1 ? 'tag_title2':'' || index == 2 ? 'tag_title3':''}}" wx:for="{{title}}" wx:key='index'>{{item.name}}</view>
+			<view class="{{ index == 0 ? 'tag_title1' : '' || index == 1 ? 'tag_title2':'' || index == 2 ? 'tag_title3':''}}" wx:for="{{title.tag}}" wx:key='index'>{{item}}</view>
 			<!-- <view wx:if='index === 2' class="tag_title2">风景</view>
 			<view wx:if='index === 3' class="tag_title3">纯色</view> -->
 		</view>
