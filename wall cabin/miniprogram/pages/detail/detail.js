@@ -70,24 +70,37 @@ Page({
     // })
   },
   // 收藏按钮
-  collect() {
-    console.log(this.data.collect_show)
-    this.setData({
-      collect_show: !(this.data.collect_show),
-      collect_hidden: !(this.data.collect_hidden)
+  collect(e) {
+  console.log(this.data.collect_show)
+  console.log(e)
+  this.setData({
+    collect_show: !(this.data.collect_show),
+    collect_hidden: !(this.data.collect_hidden)
+  })
+  if (this.data.collect_show === true) {
+    wx.showToast({
+      title: '收藏成功',
+      success: 'success'
     })
-    if (this.data.collect_show === true) {
-      wx.showToast({
-        title: '收藏成功',
-        success: 'success'
-      })
-    } else if (this.data.collect_hidden === true) {
-      wx.showToast({
-        title: '取消收藏',
-        success: 'success'
-      })
-    }
-  },
+    wx.cloud.callFunction({
+      name: 'collect',
+      data: {
+        file_id: e.currentTarget.dataset.img
+      },
+      success: res => {
+        console.log(res)
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
+  } else if (this.data.collect_hidden === true) {
+    wx.showToast({
+      title: '取消收藏',
+      success: 'success'
+    })
+  }
+},
   // 下拉框
   report() {
     console.log('report')
@@ -148,7 +161,6 @@ Page({
     wx.showLoading({
       title: 'loading',
     })
-    
     setTimeout(function () {
       wx.hideLoading()
     }, 1000)

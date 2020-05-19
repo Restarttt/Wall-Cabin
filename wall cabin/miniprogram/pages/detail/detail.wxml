@@ -46,12 +46,12 @@
 	<view class="download">
 		<view class="title">
 			<!-- 收藏 -->
-			<view class="home" bindtap="collect">
+			<view class="home" bindtap="collect"  data-img="{{img}}" >
 				<view wx:if='{{collect_hidden}}'>
 					<view class="icon">
 						<image src="../../images/home/collectt.png" />
 					</view>
-					<view class="name">收藏</view>
+					<view class="name"  >收藏</view>
 				</view>
 				<!-- 已收藏 -->
 				<view class="already" wx:if='{{collect_show}}'>
