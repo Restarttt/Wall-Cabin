@@ -21,18 +21,21 @@ exports.main = async (event, context) => {
 
 async function getvisit(event) {
   if (event.file_id) {
-    // const file = await db.collection('visit').where({
-    //   file_id: event.file_id
-    // }).get()
-    // if (file == null) {}
-    const time = new Date()
-    var visit = await db.collection('visit').add({
-      data: {
-        file_id: event.file_id,
-        name: event.userInfo.openId,
-        time: time
-      }
-    })
+    var file = await db.collection('visit').where({
+      file_id: event.file_id,
+      name: event.userInfo.openId
+    }).get()
+    console.log(file)
+    if (!file) {
+      const time = new Date()
+      var visit = await db.collection('visit').add({
+        data: {
+          file_id: event.file_id,
+          name: event.userInfo.openId,
+          time: time
+        }
+      })
+    }
   }
   return visit
 }

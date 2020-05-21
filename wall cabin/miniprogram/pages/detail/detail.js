@@ -83,7 +83,7 @@ Page({
         name: 'collect',
         data: {
           file_id: e.currentTarget.dataset.img,
-          action: 1
+          action: 'getcollect'
         },
         success: res => {
           console.log('收藏', res)
@@ -106,7 +106,7 @@ Page({
       name: 'collect',
       data: {
         cancel: e.currentTarget.dataset.img,
-        action: 0
+        action: 'getcancel'
       },
       success: res => {
         console.log('取消', res)

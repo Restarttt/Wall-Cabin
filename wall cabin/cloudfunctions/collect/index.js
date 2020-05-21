@@ -10,15 +10,15 @@ exports.main = async (event, context) => {
   console.log(event)
   const wxContext = cloud.getWXContext
   switch (event.action) {
-    case 2: {
+    case 'getlist': {
       console.log(22222)
       return getlist(event)
     }
-    case 1: {
+    case 'getcollect': {
       console.log(11111)
       return getcollect(event)
     }
-    case 0: {
+    case 'getcancel': {
       console.log(00000)
       return getcancel(event)
     }
@@ -32,9 +32,10 @@ async function getlist(event) {
   })
 }
 async function getcollect(event) {
+  let upload = undefined
+  let time = new Date()
   if (event.file_id) {
-    const time = new Date()
-    var upload = await db.collection('collect').add({
+    upload = await db.collection('collect').add({
       data: {
         file_id: event.file_id,
         name: event.userInfo.openId,

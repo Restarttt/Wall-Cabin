@@ -58,7 +58,7 @@ Page({
     wx.cloud.callFunction({
       name: 'collect',
       data: {
-        action: 2
+        action: 'getlist'
       },
       success: res => {
         console.log(res)
