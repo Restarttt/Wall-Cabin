@@ -1,13 +1,15 @@
 // pages/lately/lately.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     list: []
   },
-
+  go(e) {
+    const id = e.target.dataset.img
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/detail/detail?fileid=' + id
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -16,7 +18,7 @@ Page({
       name: 'lately',
       data: {},
       success: res => {
-        // console.log(res)
+        console.log(res)
         this.setData({
           list: res.result.list,
         })
@@ -25,7 +27,6 @@ Page({
         console.log(err)
       }
     })
-
   },
 
   /**

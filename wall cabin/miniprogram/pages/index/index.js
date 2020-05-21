@@ -54,11 +54,23 @@
       })
     },
     go(e) {
-      // console.log('file_id=', e.target.dataset.item)
+      console.log('file_id=', e.target.dataset.item)
       const id = e.target.dataset.item
       // console.log('id=', id)
       wx.navigateTo({
         url: '/pages/detail/detail?fileid=' + id
+      })
+      wx.cloud.callFunction({
+        name: 'lately',
+        data: {
+          file_id: e.target.dataset.item
+        },
+        success: res => {
+          console.log(res)
+        },
+        fail: err => {
+          console.log(err)
+        }
       })
     },
     onLoad: function (options) {

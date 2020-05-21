@@ -6,9 +6,9 @@
 	<!-- 列表 -->
 	<view class="list" wx:for='{{list}}' wx:key="index">
 		<view class="one">
-			<image src="  {{item.img}}" />
+			<image src="{{item.file_id}}" data-img="{{item.file_id}}"  bindtap='go'   />
 			<view>
-				<image bindtap="delete"  src="../../images/tag.png" class="tag" />
+				<image bindtap="delete"  src="../../images/tag.png" class="tag"  />
 			</view>
 		</view>
 	</view>

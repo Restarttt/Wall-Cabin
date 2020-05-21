@@ -10,7 +10,18 @@ Page({
     list: []
   },
   tapDialogButton(e) {
-    console.log(e)
+    wx.cloud.callFunction({
+      name:'collect',
+      data:{
+
+      },
+      success: res =>{
+        console.log(res)
+      },
+      fail: res =>{
+        console.log(res)
+      }
+    })
     if (e.detail.index == 1) {
       this.data.list.splice(e.target.dataset.index, 1)
       console.log(e)
@@ -36,13 +47,20 @@ Page({
       dialogShow: true
     })
   },
+  go(e) {
+    const id = e.target.dataset.img
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/detail/detail?fileid=' + id
+    })
+  },
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'collect',
       data: {},
       success: res => {
-        // console.log(res)
-        // console.log('collcet', res.result.list)
+        console.log(res)
+        console.log('collcet', res.result.list)
         this.setData({
           list: res.result.list,
         })

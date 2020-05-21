@@ -54,7 +54,7 @@
 					<view class="name"  >收藏</view>
 				</view>
 				<!-- 已收藏 -->
-				<view class="already" wx:if='{{collect_show}}'>
+				<view class="already" wx:if='{{collect_show}}' bindtap="cancel"  data-img="{{img}}" >
 					<view class="icon">
 						<image src="../../images/home/heart1.png" />
 					</view>

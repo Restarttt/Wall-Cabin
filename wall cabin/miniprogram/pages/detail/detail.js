@@ -65,42 +65,55 @@ Page({
       current: fileid, // 当前显示图片的http链接
       urls: [that.data.img] // 需要预览的图片http链接列表
     })
-    // this.setData({
-    //   show: true
-    // })
   },
   // 收藏按钮
   collect(e) {
-  console.log(this.data.collect_show)
-  console.log(e)
-  this.setData({
-    collect_show: !(this.data.collect_show),
-    collect_hidden: !(this.data.collect_hidden)
-  })
-  if (this.data.collect_show === true) {
-    wx.showToast({
-      title: '收藏成功',
-      success: 'success'
+    console.log(this.data.collect_show)
+    // console.log(e)
+    this.setData({
+      collect_show: !(this.data.collect_show),
+      collect_hidden: !(this.data.collect_hidden)
     })
+    if (this.data.collect_show === true) {
+      wx.showToast({
+        title: '收藏成功',
+        success: 'success'
+      })
+      wx.cloud.callFunction({
+        name: 'collect',
+        data: {
+          file_id: e.currentTarget.dataset.img
+        },
+        success: res => {
+          // console.log(res)
+        },
+        fail: err => {
+          console.log(err)
+        }
+      })
+    } else if (this.data.collect_hidden === true) {
+      wx.showToast({
+        title: '取消收藏',
+        success: 'success'
+      })
+    }
+  },
+  // 取消收藏
+  cancel(e) {
+    console.log(e)
     wx.cloud.callFunction({
       name: 'collect',
       data: {
-        file_id: e.currentTarget.dataset.img
+        cancel: e.currentTarget.dataset.img
       },
       success: res => {
         console.log(res)
       },
       fail: err => {
-        console.log(err)
+        console.loe(err)
       }
     })
-  } else if (this.data.collect_hidden === true) {
-    wx.showToast({
-      title: '取消收藏',
-      success: 'success'
-    })
-  }
-},
+  },
   // 下拉框
   report() {
     console.log('report')
@@ -148,6 +161,9 @@ Page({
       success: res => {
         // console.log(res)
         // console.log(res.result.list[0])
+        setTimeout(function () {
+          wx.hideLoading()
+        })    
         this.setData({
           img: options.fileid,
           name: res.result.list[0],
@@ -161,8 +177,7 @@ Page({
     wx.showLoading({
       title: 'loading',
     })
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 1000)
+    
   }
+
 })

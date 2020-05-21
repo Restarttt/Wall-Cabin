@@ -8,31 +8,29 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
+  
   const every = await db.collection('picture').where({
     type: 'everyday',
-    file_id: event.file
   }).get()
+
   const jenlisa = await db.collection('picture').where({
     type: 'Jenlisa',
-    file_id: event.file
   }).get()
+
   const photography = await db.collection('picture').where({
     type: 'photography',
-    file_id: event.file
   }).get()
+
   const stage = await db.collection('picture').where({
     type: 'stage',
-    file_id: event.file
   }).get()
 
   const grayscale = await db.collection('picture').where({
     type: 'grayscale',
-    file_id: event.file
   }).get()
 
   const shadow = await db.collection('picture').where({
     type: 'shadow',
-    file_id: event.file
   }).get()
 
   return {

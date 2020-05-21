@@ -3,7 +3,7 @@
 	<!-- 列表 -->
 	<view class="list" wx:for='{{list}}' wx:key="index">
 		<view class="one">
-			<image src="  {{item.img}}" />
+			<image src="{{item.file_id}}" bindtap="go" data-img="{{item.file_id}}" />
 		</view>
 	</view>
 	<!-- end -->
