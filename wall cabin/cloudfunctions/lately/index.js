@@ -9,28 +9,36 @@ const db = cloud.database()
 exports.main = async (event, context) => {
   console.log(event)
   const wxContext = cloud.getWXContext()
-  if (event.file_id) {
-    const file = await db.collection('visit').where({
-      file_id: event.file_id
-    }).get()
-    if (file == null) {
-      const time = new Date()
-      await db.collection('visit').add({
-        data: {
-          file_id: event.file_id,
-          name: event.userInfo.openId,
-          time: time
-        }
-      })
+  switch (event.action) {
+    case 'getvisit': {
+      return getvisit(event)
+    }
+    case "getlist": {
+      return getlist(event)
     }
   }
-  const list = await db.collection('visit').get()
-  return {
-    event,
-    openid: wxContext.OPENID,
-    appid: wxContext.APPID,
-    unionid: wxContext.UNIONID,
-    list: list.data,
-    test: file
+}
+
+async function getvisit(event) {
+  if (event.file_id) {
+    // const file = await db.collection('visit').where({
+    //   file_id: event.file_id
+    // }).get()
+    // if (file == null) {}
+    const time = new Date()
+    var visit = await db.collection('visit').add({
+      data: {
+        file_id: event.file_id,
+        name: event.userInfo.openId,
+        time: time
+      }
+    })
   }
+  return visit
+}
+async function getlist() {
+  const list = await db.collection('visit').get()
+  return ({
+    list: list.data
+  })
 }

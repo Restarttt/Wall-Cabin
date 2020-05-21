@@ -39,8 +39,8 @@
   padding: 10rpx 30rpx;
 }
 .end{
-  /* width: 90%;
-  position: fixed; */
+  width: 90%;
+  position: fixed;
   bottom: 28px;
 }
 .name{

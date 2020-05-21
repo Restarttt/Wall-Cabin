@@ -11,14 +11,14 @@ Page({
   },
   tapDialogButton(e) {
     wx.cloud.callFunction({
-      name:'collect',
-      data:{
+      name: 'collect',
+      data: {
 
       },
-      success: res =>{
+      success: res => {
         console.log(res)
       },
-      fail: res =>{
+      fail: res => {
         console.log(res)
       }
     })
@@ -57,7 +57,9 @@ Page({
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'collect',
-      data: {},
+      data: {
+        action: 2
+      },
       success: res => {
         console.log(res)
         console.log('collcet', res.result.list)

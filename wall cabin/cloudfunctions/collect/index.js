@@ -8,38 +8,33 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   console.log(event)
-  const wxContext = cloud.getWXContext()
+  const wxContext = cloud.getWXContext
   switch (event.action) {
-    case 'getlist': {
+    case 2: {
+      console.log(22222)
       return getlist(event)
     }
-    case 'getcollect': {
+    case 1: {
+      console.log(11111)
       return getcollect(event)
     }
-    // default:{
-    //   return
-    // }
-  }
-  return {
-    event,
-    openid: wxContext.OPENID,
-    appid: wxContext.APPID,
-    unionid: wxContext.UNIONID,
-
+    case 0: {
+      console.log(00000)
+      return getcancel(event)
+    }
   }
 }
 
 async function getlist(event) {
   const list = await db.collection('collect').get()
-  return {
+  return ({
     list: list.data
-  }
-
+  })
 }
 async function getcollect(event) {
-  const time = new Date()
   if (event.file_id) {
-    await db.collection('collect').add({
+    const time = new Date()
+    var upload = await db.collection('collect').add({
       data: {
         file_id: event.file_id,
         name: event.userInfo.openId,
@@ -47,4 +42,12 @@ async function getcollect(event) {
       }
     })
   }
+  console.log(upload)
+  return upload
+}
+async function getcancel(event) {
+  const cancel = await db.collection('collect').where({
+    file_id: event.cancel
+  }).remove()
+  return cancel
 }

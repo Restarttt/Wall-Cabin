@@ -16,7 +16,9 @@ Page({
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'lately',
-      data: {},
+      data: {
+        action:'getlist'
+      },
       success: res => {
         console.log(res)
         this.setData({

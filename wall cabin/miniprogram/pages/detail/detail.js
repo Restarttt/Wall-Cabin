@@ -82,10 +82,11 @@ Page({
       wx.cloud.callFunction({
         name: 'collect',
         data: {
-          file_id: e.currentTarget.dataset.img
+          file_id: e.currentTarget.dataset.img,
+          action: 1
         },
         success: res => {
-          // console.log(res)
+          console.log('收藏', res)
         },
         fail: err => {
           console.log(err)
@@ -104,10 +105,11 @@ Page({
     wx.cloud.callFunction({
       name: 'collect',
       data: {
-        cancel: e.currentTarget.dataset.img
+        cancel: e.currentTarget.dataset.img,
+        action: 0
       },
       success: res => {
-        console.log(res)
+        console.log('取消', res)
       },
       fail: err => {
         console.loe(err)
@@ -163,7 +165,7 @@ Page({
         // console.log(res.result.list[0])
         setTimeout(function () {
           wx.hideLoading()
-        })    
+        })
         this.setData({
           img: options.fileid,
           name: res.result.list[0],
@@ -177,7 +179,5 @@ Page({
     wx.showLoading({
       title: 'loading',
     })
-    
   }
-
 })

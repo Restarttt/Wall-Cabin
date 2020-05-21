@@ -63,7 +63,8 @@
       wx.cloud.callFunction({
         name: 'lately',
         data: {
-          file_id: e.target.dataset.item
+          file_id: e.target.dataset.item,
+          action: 'getvisit'
         },
         success: res => {
           console.log(res)
