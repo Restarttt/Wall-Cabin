@@ -62,7 +62,8 @@ async function getcollect(event) {
 
 async function getcancel(event) {
   const cancel = await db.collection('collect').where({
-    file_id: event.cancel
+    file_id: event.cancel,
+    name: event.userInfo.openId
   }).remove()
   return cancel
 }

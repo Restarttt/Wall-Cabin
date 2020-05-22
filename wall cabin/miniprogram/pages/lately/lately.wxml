@@ -6,6 +6,10 @@
 			<image src="{{item.file_id}}" bindtap="go" data-img="{{item.file_id}}" />
 		</view>
 	</view>
+	<!-- 一键清空 -->
+	<view class="detele">
+	
+	 </view>
 	<!-- end -->
 	<view class="end_title">
 		<view class="end">

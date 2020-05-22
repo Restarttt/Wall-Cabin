@@ -115,6 +115,7 @@ Page({
         console.loe(err)
       }
     })
+    
   },
   // 下拉框
   report() {

@@ -10,9 +10,12 @@ Page({
     list: []
   },
   tapDialogButton(e) {
+    console.log(e)
     wx.cloud.callFunction({
       name: 'collect',
       data: {
+        action: 'getcancel',
+        cancel: e.target.dataset.list
 
       },
       success: res => {
@@ -65,7 +68,6 @@ Page({
         console.log('collcet', res.result.list)
         this.setData({
           list: res.result.list,
-
         })
       },
       fail: err => {
