@@ -21,14 +21,15 @@ exports.main = async (event, context) => {
 
 async function getvisit(event) {
   if (event.file_id) {
+    const time = new Date()
+    var visit = null
     var file = await db.collection('visit').where({
       file_id: event.file_id,
       name: event.userInfo.openId
     }).get()
     console.log(file)
-    if (!file) {
-      const time = new Date()
-      var visit = await db.collection('visit').add({
+    if (file.data.length === 0) {
+       visit = await db.collection('visit').add({
         data: {
           file_id: event.file_id,
           name: event.userInfo.openId,

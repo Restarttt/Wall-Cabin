@@ -101,7 +101,7 @@ Page({
   },
   // 取消收藏
   cancel(e) {
-    console.log(e)
+    // console.log(e)
     wx.cloud.callFunction({
       name: 'collect',
       data: {
@@ -155,6 +155,7 @@ Page({
     })
   },
   onLoad: function (options) {
+    // console.log(options)
     wx.cloud.callFunction({
       name: 'detail',
       data: {
@@ -170,6 +171,23 @@ Page({
           img: options.fileid,
           name: res.result.list[0],
           title: res.result.list[0],
+        })
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
+    wx.cloud.callFunction({
+      name: 'collect',
+      data: {
+        action: 'getcollectmsg',
+        file_id: options.fileid
+      },
+      success: res => {
+        console.log('已收藏状态', res)
+        this.setData({
+          collect_show: res.result,
+          collect_hidden: !res.result,
         })
       },
       fail: err => {

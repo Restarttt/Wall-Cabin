@@ -65,6 +65,7 @@ Page({
         console.log('collcet', res.result.list)
         this.setData({
           list: res.result.list,
+
         })
       },
       fail: err => {

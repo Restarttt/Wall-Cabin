@@ -97,10 +97,17 @@
           this.setData({
             scenery: res.result.scenery
           })
+          setTimeout(function () {
+            wx.hideLoading()
+          })
         },
         fail: err => {
           console.log(err)
         }
       })
+      wx.showLoading({
+        title: 'loading',
+      })
     }
+    
   })

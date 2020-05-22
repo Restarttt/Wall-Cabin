@@ -45,7 +45,7 @@
 	<!-- 底部 -->
 	<view class="download">
 		<view class="title">
-			<!-- 收藏 -->
+			<!-- 收藏 默认状态（未收藏） -->
 			<view class="home" bindtap="collect"  data-img="{{img}}" >
 				<view wx:if='{{collect_hidden}}'>
 					<view class="icon">

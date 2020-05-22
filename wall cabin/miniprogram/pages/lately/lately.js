@@ -20,7 +20,7 @@ Page({
         action:'getlist'
       },
       success: res => {
-        console.log(res)
+        // console.log(res)
         this.setData({
           list: res.result.list,
         })
