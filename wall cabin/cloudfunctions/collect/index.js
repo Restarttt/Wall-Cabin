@@ -31,9 +31,11 @@ exports.main = async (event, context) => {
 }
 
 async function getlist(event) {
-  const list = await db.collection('collect').get()
+  const list = await db.collection('collect').where({
+    name: event.userInfo.openId
+  }).get()
   return ({
-    list: list.data
+    list: list.data,
   })
 }
 
@@ -44,7 +46,7 @@ async function getcollect(event) {
   if (event.file_id) {
     repeat = await db.collection('collect').where({
       file_id: event.file_id,
-      name: event.userInfo.openId,
+      name: event.userInfo.openId
     }).get()
     if (repeat.data.length === 0) {
       upload = await db.collection('collect').add({

@@ -33,7 +33,7 @@ Page({
     })
     wx.showToast({
       title: '图片均可滑动',
-      duration: 10000
+      duration: 5000
     })
   }
 })

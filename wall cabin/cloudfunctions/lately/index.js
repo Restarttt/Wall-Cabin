@@ -40,8 +40,10 @@ async function getvisit(event) {
   }
   return visit
 }
-async function getlist() {
-  const list = await db.collection('visit').get()
+async function getlist(event) {
+  const list = await db.collection('visit').where({
+    name: event.userInfo.openId
+  }).get()
   return ({
     list: list.data
   })
