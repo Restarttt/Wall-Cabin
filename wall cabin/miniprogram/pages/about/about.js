@@ -1,13 +1,7 @@
 // pages/about/about.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
-
-  },
+  data: {},
+  // 点击复制
   copy(){
     wx.setClipboardData({
       data: 'Shot-ZH',
@@ -44,6 +38,4 @@ Page({
       }
     })
   },
-
-
 })

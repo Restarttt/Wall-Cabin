@@ -9,6 +9,7 @@ Page({
     duration: "1000",
     lisa: []
   },
+  // 带参数去详情页
   go(e) {
     console.log('file_id==', e.target.dataset.item)
     const id = e.target.dataset.item
@@ -17,6 +18,7 @@ Page({
       url: '/pages/detail/detail?fileid=' + id
     })
   },
+  // 请求数据列表
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'Lalisa',

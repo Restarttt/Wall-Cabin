@@ -17,11 +17,13 @@ Page({
       url: '/pages/detail/detail?fileid=' + id
     })
   },
+  // 删除状态
   clear() {
     this.setData({
       dialogShow: true,
     })
   },
+  // 弹框信息
   tapDialogButton(e) {
     wx.cloud.callFunction({
       name: 'lately',
@@ -59,6 +61,7 @@ Page({
       }
     })
   },
+  // 请求数据列表
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'lately',
@@ -84,7 +87,7 @@ Page({
         console.log(err)
       }
     })
-  },
+},
 
   /**
    * 生命周期函数--监听页面初次渲染完成

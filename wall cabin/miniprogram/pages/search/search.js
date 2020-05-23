@@ -9,6 +9,7 @@ Page({
     word: [],
     hot_list: [],
   },
+  // 删除关键字
   detele(e) {
     console.log(e)
     this.data.word.splice(e.target.dataset.index, 1)
@@ -16,6 +17,7 @@ Page({
       word: this.data.word
     })
   },
+  // 请求关键字
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'search',

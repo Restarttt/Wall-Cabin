@@ -1,5 +1,6 @@
 <!-- search wxml -->
 <view class="search">
+<!-- 搜索框 -->
 	<input class="search_btn" placeholder-style="color:	#696969" placeholder="LAlisaManoban">
 	<view class="glass">
 		<image src="../../images/glass.png" />
@@ -31,6 +32,7 @@
 		</view>
 	</view>
 </view>
+<!-- 关键字列表 -->
 <view class="key">
 	<view class="key_name" wx:for="{{hot_list}}" wx:key="index">{{item}}</view>
 </view>

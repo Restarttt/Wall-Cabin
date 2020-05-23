@@ -7,7 +7,7 @@
 			<view class="theme"> Wall Cabin</view>
 			<view class="theme_1"> 爱生活、爱壁纸</view>
 		</view>
-	
+	<!-- 联系方式 -->
 		<view class="wechat">
 			<image src="../../images/wechat.png" ></image>
 			<!-- <view class="title" bindtap="copy">Shot-ZH</view> -->
@@ -26,5 +26,4 @@
 	<view class="exemption">
 		免责声明: 壁纸内容均来自互联网，如有涉及版权问题，请随时联系我
 	</view>
-
 </view>

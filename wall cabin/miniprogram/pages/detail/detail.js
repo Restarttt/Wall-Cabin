@@ -101,7 +101,6 @@ Page({
   },
   // 取消收藏
   cancel(e) {
-    // console.log(e)
     wx.cloud.callFunction({
       name: 'collect',
       data: {
@@ -114,8 +113,7 @@ Page({
       fail: err => {
         console.loe(err)
       }
-    })
-    
+    })  
   },
   // 下拉框
   report() {
@@ -127,6 +125,7 @@ Page({
     })
     // }, 3000)
   },
+  // 举报按钮
   btnClick(e) {
     console.log(e)
     if (e.detail.index <= 1) {
@@ -155,6 +154,7 @@ Page({
       service: false,
     })
   },
+  // 请求详细信息和收藏状态
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'detail',

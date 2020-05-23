@@ -1,5 +1,4 @@
 <!--home.wxml-->
-
 <view class="home">
 	<!-- 头像部分 -->
 	<view class="head">
@@ -42,7 +41,6 @@
 			</view>
 		</view>
 	</view>
-
 	<!-- 作者部分 -->
 	<view class="service">
 		<view class="serve">

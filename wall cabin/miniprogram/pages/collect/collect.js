@@ -10,6 +10,7 @@ Page({
     }],
     list: []
   },
+  // 提示确认信息
   tapDialogButton(e) {
     // console.log('detele', e)
     wx.cloud.callFunction({
@@ -47,6 +48,7 @@ Page({
       dialogShow: true
     })
   },
+  // 跳转带参数
   go(e) {
     const id = e.target.dataset.img
     console.log(e)
@@ -54,6 +56,7 @@ Page({
       url: '/pages/detail/detail?fileid=' + id
     })
   },
+  // 请求数据列表
   onLoad: function () {
     wx.cloud.callFunction({
       name: 'collect',
@@ -64,13 +67,13 @@ Page({
         this.setData({
           list: res.result.list
         })
-
       },
       fail: err => {
         console.log(err)
       }
     })
   },
+  // 重新进入请求数据列表
   onShow: function () {
     wx.cloud.callFunction({
       name: 'collect',
@@ -78,7 +81,6 @@ Page({
         action: 'getlist'
       },
       success: res => {
-        // console.log(res)
         console.log('collcet', res.result.list)
         this.setData({
           list: res.result.list,
