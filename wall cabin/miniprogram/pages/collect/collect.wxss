@@ -7,7 +7,7 @@
   width: 30.333%;
   display: inline-block;
   margin: 11rpx;
-  
+
 }
 
 .one {
@@ -29,25 +29,30 @@
   bottom: 15rpx;
   right: 9rpx;
 }
+
 /* end */
-.end_title{
+.end_title {
   padding: 10rpx 30rpx;
 }
-.end{
+
+.end {
   width: 90%;
   position: fixed;
   bottom: 28px;
 }
-.name{
+
+.name {
   position: relative;
 }
-.line{
+
+.line {
   width: 100%;
   height: 2rpx;
   background-color: #F5F5F5;
 
 }
-.title{
+
+.title {
   color: #666;
   position: absolute;
   top: -18rpx;
@@ -55,5 +60,26 @@
   background-color: #fff;
   width: 40%;
   text-align: center;
-  font-size: 25rpx; 
+  font-size: 25rpx;
+}
+
+/* 背景 */
+.bg {
+  width: 100%;
+  top: 18%;
+  position: fixed;
+  font-size: 35rpx;
+}
+
+.bg image {
+  width: 77%;
+  position: relative;
+  left: 14%;
+}
+
+.bg_title {
+  text-align: center;
+  margin-top: 38rpx;
+  color: #666;
+  font-size: 35rpx;
 }

@@ -31,17 +31,5 @@ Page({
         console.log(err)
       }
     })
-    wx.cloud.callFunction({
-      name: 'openapi',
-      data: {},
-      success: res => {
-        console.log(res)
-      },
-      fail: err => {
-        console.log(err)
-      }
-    })
   }
-
-
 })

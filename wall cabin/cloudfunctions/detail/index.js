@@ -9,7 +9,7 @@ const db = cloud.database()
 exports.main = async (event, context) => {
   console.log(event)
   const wxContext = cloud.getWXContext()
-  const list = await db.collection('picture').where({
+  const detail = await db.collection('picture').where({
     file_id: event.file
   }).get()
 
@@ -18,6 +18,6 @@ exports.main = async (event, context) => {
     openid: wxContext.OPENID,
     appid: wxContext.APPID,
     unionid: wxContext.UNIONID,
-    list: list.data,
+    detail: detail.data,
   }
 }

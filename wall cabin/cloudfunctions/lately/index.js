@@ -16,6 +16,9 @@ exports.main = async (event, context) => {
     case "getlist": {
       return getlist(event)
     }
+    case "clear":{
+      return clear(event)
+    }
   }
 }
 
@@ -29,7 +32,7 @@ async function getvisit(event) {
     }).get()
     console.log(file)
     if (file.data.length === 0) {
-       visit = await db.collection('visit').add({
+      visit = await db.collection('visit').add({
         data: {
           file_id: event.file_id,
           name: event.userInfo.openId,
@@ -47,4 +50,10 @@ async function getlist(event) {
   return ({
     list: list.data
   })
+}
+async function clear(event) {
+  const clear = await db.collection('visit').where({
+    name: event.userInfo.openId
+  }).remove()
+  return clear
 }

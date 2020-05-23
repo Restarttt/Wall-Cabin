@@ -1,5 +1,15 @@
 <!--pages/lately/lately.wxml-->
+<mp-dialog title="一键清空" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}" wx:for='{{list}}' wx:key="index" data-index="{{index}}" data-list='{{list}}'>
+	<view>确认一键清空</view>
+</mp-dialog>
 <view class="exchage">
+	<!-- 背景 -->
+	<view class="bg" wx:if="{{bg}}">
+		<image src="../../images/home/bg.jpg" />
+		<view class="bg_title">
+			暂无访问记录
+		</view>
+	</view>
 	<!-- 列表 -->
 	<view class="list" wx:for='{{list}}' wx:key="index">
 		<view class="one">
@@ -7,9 +17,9 @@
 		</view>
 	</view>
 	<!-- 一键清空 -->
-	<view class="detele">
-	
-	 </view>
+	<view class="detele" bindtap="clear" >
+			<image src="../../images/home/detele.png" />
+	</view>
 	<!-- end -->
 	<view class="end_title">
 		<view class="end">

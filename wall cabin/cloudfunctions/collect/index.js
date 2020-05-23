@@ -11,21 +11,16 @@ exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext
   switch (event.action) {
     case 'getlist': {
-      console.log(22222)
       return getlist(event)
     }
     case 'getcollect': {
-      console.log(11111)
       return getcollect(event)
     }
     case 'getcancel': {
-      console.log(00000)
       return getcancel(event)
     }
     case 'getcollectmsg': {
-      console.log(333)
       return getcollectmsg(event)
-
     }
   }
 }

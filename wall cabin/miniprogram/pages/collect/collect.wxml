@@ -3,12 +3,20 @@
 	<view>确认取消收藏</view>
 </mp-dialog>
 <view class="collect">
+	<!-- 背景 -->
+	<view class="bg" wx:if="{{bg}}">
+		<image src="../../images/home/bg.jpg" />
+		<view class="bg_title">
+			暂无收藏内容
+		</view>
+	</view>
+
 	<!-- 列表 -->
 	<view class="list" wx:for='{{list}}' wx:key="index">
 		<view class="one">
-			<image src="{{item.file_id}}" data-img="{{item.file_id}}"  bindtap='go'   />
+			<image src="{{item.file_id}}" data-img="{{item.file_id}}" bindtap='go' />
 			<view>
-				<image bindtap="delete"  src="../../images/tag.png" class="tag"  />
+				<image bindtap="delete" src="../../images/tag.png" class="tag" />
 			</view>
 		</view>
 	</view>

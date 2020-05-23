@@ -156,22 +156,19 @@ Page({
     })
   },
   onLoad: function (options) {
-    // console.log(options)
     wx.cloud.callFunction({
       name: 'detail',
       data: {
         file: options.fileid
       },
       success: res => {
-        // console.log(res)
-        // console.log(res.result.list[0])
         setTimeout(function () {
           wx.hideLoading()
         })
         this.setData({
           img: options.fileid,
-          name: res.result.list[0],
-          title: res.result.list[0],
+          name: res.result.detail[0],
+          title: res.result.detail[0],
         })
       },
       fail: err => {
