@@ -50,8 +50,8 @@ Page({
   // 去搜索页面
   back() {
     console.log(111)
-    wx.switchTab({
-      url: '/pages/search/search',
+    wx.navigateTo({
+      url: '/pages/wallpaper/wallpaper',
     })
   },
   // 带参数跳转+上传访问信息
@@ -78,6 +78,7 @@ Page({
   },
   // 加载列表信息
   onLoad: function (options) {
+    wx.startPullDownRefresh()
     wx.cloud.callFunction({
       name: 'home',
       data: {},
@@ -111,5 +112,11 @@ Page({
     wx.showLoading({
       title: 'loading',
     })
-  }  
+  },
+    /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
 })

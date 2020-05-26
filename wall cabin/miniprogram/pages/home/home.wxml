@@ -4,7 +4,7 @@
 	<view class="head">
 		<view class="photo">
 			<image src="{{userImg}}" />
-			<view class="user_name" >{{userName}}</view>
+			<view class="user_name">{{userName}}</view>
 		</view>
 		<block>
 			<button class="login_btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" wx:if="{{toggle}}">登录</button>
@@ -30,16 +30,20 @@
 				签到
 			</view>
 			<view class="sign_list">
-				<view class="sign_in" wx:for="{{sign}}" wx:key="index" >
-						<view class="frist_num">
-							{{item.num}}
-						</view>
-						<view class="frist_title">
-							{{item.name}}
-						</view>
+				<view class="sign_in" wx:for="{{sign}}" wx:key="index">
+					<view class="frist_num">
+						{{item.num}}
+					</view>
+					<view class="frist_title">
+						{{item.name}}
+					</view>
 				</view>
 			</view>
 		</view>
+	</view>
+	<!-- 已签到部分 -->
+	<view class="sign_in">
+		<view></view>
 	</view>
 	<!-- 作者部分 -->
 	<view class="service">

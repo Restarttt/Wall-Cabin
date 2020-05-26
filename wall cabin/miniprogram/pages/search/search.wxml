@@ -1,38 +1,50 @@
 <!-- search wxml -->
-<view class="search">
+<!-- <mp-searchbar bindselectresult="selectResult" search="{{search}}" placeholder="LAlisaManoban"></mp-searchbar> -->
 <!-- 搜索框 -->
-	<input class="search_btn" placeholder-style="color:	#696969" placeholder="LAlisaManoban">
+<view class="search">
+	<!-- 搜索框 -->
+	<input class="search_btn" value="{{inputValue}}" placeholder-style="color:	#696969" placeholder="LAlisaManoban" bindconfirm="keysearch" >
 	<view class="glass">
 		<image src="../../images/glass.png" />
 	</view>
 	</input>
 </view>
 <!-- 关键字 -->
-<view class="keyword">
-	<!-- 最近 -->
-	<view class="lately_search">
+<view wx:if='{{key}}'> 
+	<view class="keyword">
+		<!-- 最近 -->
+		<view class="lately_search" >
+			<view class="lately">
+				<view class="lately_name">
+					{{late}}
+				</view>
+				<view class="lately_img" bindtap="detele">
+					<image src="../../images/home/trash.png" />
+				</view>
+			</view>
+		</view>
+		<view class="key">
+			<view class="key_name" wx:for='{{word}}' wx:key='index' data-index="{{index}}">{{item}}</view>
+		</view>
+	</view>
+	<!-- 热门 -->
+	<view class="lately_search" wx:if='{{hot_key}}'>
 		<view class="lately">
 			<view class="lately_name">
-				{{late}}
-			</view>
-			<view class="lately_img" bindtap="detele">
-				<image src="../../images/home/trash.png"  />
+				{{hot}}
 			</view>
 		</view>
 	</view>
-	<view class="key">
-		<view class="key_name"   wx:for='{{word}}' wx:key='index' data-index="{{index}}">{{item}}</view>
+	<!-- 关键字列表 -->
+	<view class="key" wx:if='{{hot_key}}' >
+		<view class="key_name" wx:for="{{hot_list}}" wx:key="index" bindtap="go">{{item}}</view>
 	</view>
 </view>
-<!-- 热门 -->
-<view class="lately_search">
-	<view class="lately">
-		<view class="lately_name">
-			{{hot}}
+<!-- 图片内容 -->
+<view class="picture">
+	<view class="picture_list">
+		<view class="list" wx:for='{{pic_list}}' wx:key='index'>
+			<image src="{{item.file_id}}" />
 		</view>
 	</view>
-</view>
-<!-- 关键字列表 -->
-<view class="key">
-	<view class="key_name" wx:for="{{hot_list}}" wx:key="index">{{item}}</view>
 </view>

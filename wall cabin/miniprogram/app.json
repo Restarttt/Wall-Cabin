@@ -7,7 +7,8 @@
     "pages/about/about",
     "pages/collect/collect",
     "pages/lately/lately",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/wallpaper/wallpaper"
 
   ],
   "window": {

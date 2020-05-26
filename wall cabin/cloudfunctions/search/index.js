@@ -7,12 +7,13 @@ cloud.init({
 const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
+  console.log(event)
+  event.search_key = ''
   const wxContext = cloud.getWXContext()
-  const test = await db.collection('grade').where({
-    name: 'Lalisa'
+  const pic_list = await db.collection('picture').where({ 
+    describe: event.search_key
   }).get()
-  console.log(test)
-
+  
   return {
     event,
     openid: wxContext.OPENID,
@@ -27,9 +28,7 @@ exports.main = async (event, context) => {
       '动漫',
       '性感'
     ],
-    word:[
-      '文字'
-    ],
-    test: test.data
+    word: event.search_key,
+    pic_list: pic_list.data
   }
 }

@@ -66,3 +66,24 @@ input {
   margin: 15rpx ;
 
 }
+/* 图片内容 */
+.picture{
+  padding: 10rpx 30rpx;
+
+}
+.picture_list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.list {
+  width: 31.333%;
+  height: 385rpx;
+  margin-bottom: 20rpx;
+}
+
+.list image {
+  width: 100% ;
+  height: 100%;
+  border-radius: 8rpx;
+}

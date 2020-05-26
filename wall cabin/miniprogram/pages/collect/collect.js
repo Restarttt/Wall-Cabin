@@ -1,7 +1,7 @@
 // pages/collect/collect.js
 Page({
   data: {
-    bg: true,
+    bg: null,
     dialogShow: false,
     buttons: [{
       text: '取消'
@@ -100,4 +100,9 @@ Page({
       }
     })
   },
+  /* 用户点击右上角分享
+  */
+ onShareAppMessage: function () {
+
+ }
 })

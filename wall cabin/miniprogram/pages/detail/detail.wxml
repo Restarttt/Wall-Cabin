@@ -62,12 +62,13 @@
 				</view>
 			</view>
 			<!-- 保存 -->
-			<view class="home">
+			<!-- <view class="home">
 				<view class="down_icon" bindtap="save">
 					<image bingtap='download' src="../../images/home/download.png" class="down" />
 				</view>
 				<view class="down_name">保存</view>
-			</view>
+			</view> -->
+			<!-- 分享 -->
 			<button open-type="share" plain="true" class="share" style="border: 0;pading: 0;margin: 0;width: 80rpx;">
 				<view class="icon">
 					<image src="../../images/home/share.png" />

@@ -63,6 +63,7 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
             success: (res) => {
+              console.log(res)
               let userName = res.userInfo.nickName
               let userImg = res.userInfo.avatarUrl
               this.setData({
@@ -86,4 +87,40 @@ Page({
       }
     })
   },
+  onLoad:function(){
+    wx.getSetting({
+      success: (res) => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: (res) => {
+              let userName = res.userInfo.nickName
+              let userImg = res.userInfo.avatarUrl
+              this.setData({
+                userName: userName,
+                userImg: userImg,
+                toggle: false,
+                show: true
+              })
+              console.log(res.userInfo.nickName)
+              console.log(res.userInfo)
+            }
+          })
+        } else {
+          wx.showToast({
+            title: '登录失败',
+            icon: 'none',
+            duration: 2222,
+            mask: true
+          })
+        }
+      }
+    })
+
+
+
+  },
+  // * 用户点击右上角分享
+  // */
+ onShareAppMessage: function () {}
 })

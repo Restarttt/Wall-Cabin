@@ -2,7 +2,7 @@
 Page({
   data: {
     list: [],
-    bg: true,
+    bg: null,
     dialogShow: false,
     buttons: [{
       text: '取消'
@@ -73,15 +73,6 @@ Page({
         this.setData({
           list: res.result.list,
         })
-        if (this.data.list.length != 0) {
-          this.setData({
-            bg: false
-          })
-        } else {
-          this.setData({
-            bg: true
-          })
-        }
       },
       fail: err => {
         console.log(err)
@@ -100,7 +91,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.cloud.callFunction({
+      name: 'lately',
+      data: {
+        action: 'getlist'
+      },
+      success: res => {
+        console.log(res)
+        this.setData({
+          list: res.result.list,
+        })
+        if (this.data.list.length === 0) {
+          this.setData({
+            bg: true
+          })
+        } else {
+          this.setData({
+            bg: false
+          })
+        }
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
   },
 
   /**
