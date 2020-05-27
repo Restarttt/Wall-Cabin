@@ -8,17 +8,18 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   console.log(event)
-  event.search_key = ''
-  const wxContext = cloud.getWXContext()
-  const pic_list = await db.collection('picture').where({ 
-    describe: event.search_key
-  }).get()
-  
+  switch (event.action) {
+    case 'getkeylist': {
+      return getkeylist(event)
+    }
+    case 'getkeyword':{
+      return getkeyword(event)
+    } 
+  }
+}
+
+async function getkeylist(event) {
   return {
-    event,
-    openid: wxContext.OPENID,
-    appid: wxContext.APPID,
-    unionid: wxContext.UNIONID,
     list: [
       '风景',
       '文字',
@@ -28,7 +29,11 @@ exports.main = async (event, context) => {
       '动漫',
       '性感'
     ],
-    word: event.search_key,
-    pic_list: pic_list.data
   }
 }
+async function getkeyword(event) {
+  const pic_list = await db.collection('picture').where({
+    describe: event.search_key
+  }).get()
+  return pic_list
+  }

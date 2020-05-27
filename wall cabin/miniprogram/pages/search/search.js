@@ -27,20 +27,26 @@ Page({
       url: '/pages/wallpaper/wallpaper',
     })
   },
+  go_detail(){
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+    })
+  },
   // 请求图片
   keysearch(e) {
     console.log(e)
     wx.cloud.callFunction({
       name: 'search',
       data: {
+        action: 'getkeyword',
         search_key: e.detail.value
       },
       success: res => {
         console.log(res)
         this.setData({
-          pic_list: res.result.pic_list
+          pic_list: res.result.data
         })
-        if (res.result.pic_list.length != 0) {
+        if (res.result.data.length != 0) {
           this.setData({
             key: false
           })
@@ -55,9 +61,11 @@ Page({
   onLoad: function () {
     wx.cloud.callFunction({
       name: 'search',
-      data: {},
+      data: {
+        action:'getkeylist'      
+      },
       success: res => {
-        console.log(res)
+        // console.log(res)
         this.setData({
           hot_list: res.result.list,
           word: res.result.word
@@ -68,20 +76,21 @@ Page({
       }
     })
   },
-  // 
-  onShow: function () {
-      wx.cloud.callFunction({
-        name: 'search',
-        data: {},
-        success: res => {
-          console.log(res.result.event.search_key)
-          this.setData({
-            word: res.result.word
-          })
-        },
-        fail: err => {
-          console.log(err)
-        }
-      })
-  }
+  // onShow: function () {
+  //   wx.cloud.callFunction({
+  //     name: 'search',
+  //     data: {
+  //       action: 'getkeyword',
+  //     },
+  //     success: res => {
+  //       console.log(res)
+  //       this.setData({
+  //         word: res.result
+  //       })
+  //     },
+  //     fail: err => {
+  //       console.log(err)
+  //     }
+  //   })
+  // }
 })

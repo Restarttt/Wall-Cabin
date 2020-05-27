@@ -43,7 +43,7 @@
 <!-- 图片内容 -->
 <view class="picture">
 	<view class="picture_list">
-		<view class="list" wx:for='{{pic_list}}' wx:key='index'>
+		<view class="list" wx:for='{{pic_list}}' wx:key='index' bindtap="{{go_detail}}">
 			<image src="{{item.file_id}}" />
 		</view>
 	</view>

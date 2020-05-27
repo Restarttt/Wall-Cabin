@@ -20,6 +20,15 @@ exports.main = async (event, context) => {
   const creative = await db.collection('picture').where({
     type: 'creative'
   }).get()
+  const cartoon = await db.collection('picture').where({
+    type: 'cartoon'
+  }).get()
+  const painting = await db.collection('picture').where({
+    type: 'painting'
+  }).get()
+  const brand = await db.collection('picture').where({
+    type: 'brand'
+  }).get()
 
   return {
     event,
@@ -37,7 +46,8 @@ exports.main = async (event, context) => {
         dot: '../../images/scenery/dot.png',
         name: "创意",
         list: creative.data
-      }, {
+      }, 
+      {
         back: "../../images/scenery/back1.png",
         dot: '../../images/scenery/dot.png',
         name: "建筑",
@@ -49,6 +59,24 @@ exports.main = async (event, context) => {
         name: "动物",
         list: animal.data
       },
+      {
+        back: "../../images/scenery/back1.png",
+        dot: '../../images/scenery/dot.png',
+        name: "动漫",
+        list: cartoon.data
+      },
+      {
+        back: "../../images/scenery/back1.png",
+        dot: '../../images/scenery/dot.png',
+        name: "油画",
+        list: painting.data
+      },
+      {
+        back: "../../images/scenery/back1.png",
+        dot: '../../images/scenery/dot.png',
+        name: "品牌",
+        list: brand.data
+      }
     ]
   }
 }

@@ -38,12 +38,12 @@ Page({
       url: '../special/special'
     }, {
       img: "../../images/icon/pc.png",
-      text: "PC",
+      text: "头像",
       url: '../special/special'
     }, {
       img: "../../images/icon/more.png",
-      text: "更多",
-      url: '../special/special'
+      text: "方图",
+      url: '../wechat/wechat'
     }],
     scenery: []
   },

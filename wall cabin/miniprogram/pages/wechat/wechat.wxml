@@ -1,0 +1,10 @@
+<!--pages/wechat/wechat.wxml-->
+<view class="wechat">
+	<view class="wechat_list">
+		<swiper>
+			<swiper-item wx:for='{{list}}' wx:key="index"  display-multiple-items= '3' class='swiper-item' >
+				<image src="{{item.file_id}}"  data-img='{{item.file_id}}' bindtap='big' />
+			</swiper-item>
+		</swiper>
+	</view>
+</view>

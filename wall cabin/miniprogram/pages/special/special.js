@@ -24,7 +24,7 @@ Page({
       name: 'Lalisa',
       data: {},
       success: res => {
-        // console.log(res)
+        console.log(res)
         this.setData({
           lisa: res.result.list,
         })
@@ -35,7 +35,7 @@ Page({
     })
     wx.showToast({
       title: '图片均可滑动',
-      duration: 5000
+      duration:3000
     })
   }
 })
