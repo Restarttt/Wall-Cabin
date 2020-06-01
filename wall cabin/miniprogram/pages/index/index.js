@@ -39,7 +39,7 @@ Page({
     }, {
       img: "../../images/icon/pc.png",
       text: "头像",
-      url: '../special/special'
+      url: '../head/head'
     }, {
       img: "../../images/icon/more.png",
       text: "方图",
@@ -49,7 +49,6 @@ Page({
   },
   // 去搜索页面
   back() {
-    console.log(111)
     wx.navigateTo({
       url: '/pages/wallpaper/wallpaper',
     })
@@ -113,6 +112,7 @@ Page({
       title: 'loading',
     })
   },
+
     /**
    * 用户点击右上角分享
    */

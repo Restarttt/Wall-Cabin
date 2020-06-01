@@ -1,1 +1,52 @@
 /* pages/wallpaper/wallpaper.wxss */
+.paper{
+  padding: 30rpx;
+}
+/* 列表 */
+.wall{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.wall_list{
+  width: 31.33%;
+  height: 385rpx;
+  margin: 20rpx 0;
+}
+image{
+  width: 100%;
+  height: 100%;
+  border-radius: 13rpx
+}
+/* end */
+.end_title {
+  padding: 10rpx 30rpx;
+}
+
+.end {
+  width: 90%;
+  position: fixed;
+  bottom: 28px;
+}
+
+.name {
+  position: relative;
+}
+
+.line {
+  width: 100%;
+  height: 2rpx;
+  background-color: #F5F5F5;
+
+}
+
+.title {
+  color: #666;
+  position: absolute;
+  top: -18rpx;
+  left: 30%;
+  background-color: #fff;
+  width: 40%;
+  text-align: center;
+  font-size: 25rpx;
+}

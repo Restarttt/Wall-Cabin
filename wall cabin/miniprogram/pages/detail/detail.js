@@ -156,6 +156,7 @@ Page({
   },
   // 请求详细信息和收藏状态
   onLoad: function (options) {
+    console.log(options)
     wx.cloud.callFunction({
       name: 'detail',
       data: {

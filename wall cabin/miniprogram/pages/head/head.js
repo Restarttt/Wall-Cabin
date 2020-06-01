@@ -1,4 +1,4 @@
-// pages/wallpaper/wallpaper.js
+// pages/head/head.js
 Page({
 
   /**
@@ -6,25 +6,16 @@ Page({
    */
   data: {
     list:[]
+
   },
-  go(e){
+  big(e){
     console.log(e)
-    const img=e.currentTarget.dataset.img
-    wx.navigateTo({
-      url: '../detail/detail?fileid='+img,
-    })
-    wx.cloud.callFunction({
-      name: 'lately',
-      data: {
-        file_id: e.currentTarget.dataset.img,
-        action: 'getvisit'
-      },
-      success: res => {
-        console.log(res)
-      },
-      fail: err => {
-        console.log(err)
-      }
+    const that = this
+    const fileid = e.target.dataset.img
+    const index =e.target.dataset.index
+    wx.previewImage({
+      current: fileid, // 当前显示图片的http链接
+      urls: [that.data.list[index].file_id] // 需要预览的图片http链接列表
     })
   },
 
@@ -33,19 +24,18 @@ Page({
    */
   onLoad: function (options) {
     wx.cloud.callFunction({
-      name:'wallpaper',
+      name:'head',
       data:{},
-      success:res=>{
+      success: res =>{
         console.log(res)
         this.setData({
-          list:res.result.list
+         list:res.result.list
         })
       },
-      fail:err=>{
+      fail:err =>{
         console.log(err)
       }
     })
-
   },
 
   /**

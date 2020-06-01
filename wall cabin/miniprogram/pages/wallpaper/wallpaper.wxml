@@ -1,6 +1,19 @@
 <!--pages/wallpaper/wallpaper.wxml-->
-<view class="wall">
-111aaaa
-
-</view>
+  <view class="paper">
+  <!-- l列表 -->
+    <view class="wall">
+      <view class="wall_list" wx:for="{{list}}" wx:key='index' >
+        <image src="{{item.file_id}}" bindtap="go"data-img="{{item.file_id}}" />
+      </view>
+    </view>
+    	<!-- end -->
+	<view class="end_title">
+		<view class="end">
+			<view class="name">
+				<view class="line"></view>
+				<view class="title">IN YOUR AREA</view>
+			</view>
+		</view>
+	</view>
+  </view>
 

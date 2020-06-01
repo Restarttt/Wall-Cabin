@@ -18,13 +18,14 @@ Page({
       url: '/pages/detail/detail?fileid=' + id
     })
   },
+  
   // 请求数据列表
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'Lalisa',
       data: {},
       success: res => {
-        console.log(res)
+        // console.log(res.result.list)
         this.setData({
           lisa: res.result.list,
         })

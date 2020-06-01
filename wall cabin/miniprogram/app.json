@@ -9,10 +9,8 @@
     "pages/lately/lately",
     "pages/detail/detail",
     "pages/wallpaper/wallpaper",
-    "pages/wechat/wechat"
-
-
-
+    "pages/wechat/wechat",
+    "pages/head/head"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,7 +35,6 @@
         "text": "搜索",
         "iconPath": "/images/tabBar/search4.png",
         "selectedIconPath": "/images/tabBar/serarch3.png"
-
       },
       {
         "pagePath": "pages/home/home",
