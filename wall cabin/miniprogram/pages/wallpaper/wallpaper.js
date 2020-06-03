@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    bg:null,
     list:[]
   },
   go(e){
@@ -28,18 +29,27 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    console.log(options)
     wx.cloud.callFunction({
       name:'wallpaper',
-      data:{},
+      data:{
+        key: options.key
+      },
       success:res=>{
         console.log(res)
         this.setData({
           list:res.result.list
         })
+        if (this.data.list.length != 0) {
+          this.setData({
+            bg: false
+          })
+        } else {
+          this.setData({
+            bg: true
+          })
+        }
       },
       fail:err=>{
         console.log(err)

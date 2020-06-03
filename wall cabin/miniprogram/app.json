@@ -10,7 +10,11 @@
     "pages/detail/detail",
     "pages/wallpaper/wallpaper",
     "pages/wechat/wechat",
-    "pages/head/head"
+    "pages/head/head",
+    "pages/emoji/emoji",
+    "pages/rank/rank",
+    "pages/random/random",
+    "pages/hot/hot"
   ],
   "window": {
     "backgroundTextStyle": "light",

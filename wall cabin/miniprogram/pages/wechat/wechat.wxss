@@ -3,7 +3,7 @@
   padding: 50rpx 30rpx;
 }
 swiper{
-  height: 400rpx;
+  height: 520rpx;
   border-radius: 10rpx;
   overflow: hidden;
   transform: translateY(0);

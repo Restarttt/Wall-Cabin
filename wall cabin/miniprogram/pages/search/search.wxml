@@ -18,13 +18,13 @@
 				<view class="lately_name">
 					{{late}}
 				</view>
-				<view class="lately_img" bindtap="detele">
+				<view class="lately_img" bindtap="detele" data-list='{{word}}'>
 					<image src="../../images/home/trash.png" />
 				</view>
 			</view>
 		</view>
 		<view class="key">
-			<view class="key_name" wx:for='{{word}}' wx:key='index' data-index="{{index}}">{{item}}</view>
+			<view class="key_name" wx:for='{{word}}' wx:key='index' >{{item.keyword}}</view>
 		</view>
 	</view>
 	<!-- 热门 -->
@@ -37,7 +37,7 @@
 	</view>
 	<!-- 关键字列表 -->
 	<view class="key" wx:if='{{hot_key}}' >
-		<view class="key_name" wx:for="{{hot_list}}" wx:key="index" bindtap="go">{{item}}</view>
+		<view class="key_name" wx:for="{{hot_list}}" wx:key="index" bindtap="go" data-key='{{item}}'>{{item}}</view>
 	</view>
 </view>
 <!-- 图片内容 -->

@@ -9,25 +9,25 @@ const db = cloud.database()
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   const animal = await db.collection('picture').where({
-    type: 'animal'
+   describe: '关于动物类壁纸'
   }).get()
   const scenery = await db.collection('picture').where({
-    type: 'scenery'
+    describe: '关于风景类壁纸'
   }).get()
   const architecture = await db.collection('picture').where({
-    type: 'architecture'
+    describe: '关于建筑类壁纸'
   }).get()
   const creative = await db.collection('picture').where({
-    type: 'creative'
+    describe: '关于创意类壁纸'
   }).get()
   const cartoon = await db.collection('picture').where({
-    type: 'cartoon'
+    describe: '关于动漫类壁纸'
   }).get()
   const painting = await db.collection('picture').where({
-    type: 'painting'
+    describe: '关于油画类壁纸'
   }).get()
   const brand = await db.collection('picture').where({
-    type: 'brand'
+    describe: '关于运动品牌类壁纸'
   }).get()
 
   return {

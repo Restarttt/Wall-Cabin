@@ -1,5 +1,12 @@
 <!--pages/wallpaper/wallpaper.wxml-->
   <view class="paper">
+		<!-- 背景 -->
+	<view class="bg" wx:if="{{bg}}">
+		<image src="../../images/home/bg.jpg" />
+		<view class="bg_title">
+			等待更新ING
+		</view>
+	</view>
   <!-- l列表 -->
     <view class="wall">
       <view class="wall_list" wx:for="{{list}}" wx:key='index' >

@@ -17,6 +17,19 @@ Page({
     wx.navigateTo({
       url: '/pages/detail/detail?fileid=' + id
     })
+    wx.cloud.callFunction({
+      name: 'lately',
+      data: {
+        file_id: e.target.dataset.item,
+        action: 'getvisit'
+      },
+      success: res => {
+        console.log(res)
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
   },
   
   // 请求数据列表

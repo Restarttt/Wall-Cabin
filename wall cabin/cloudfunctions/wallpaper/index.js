@@ -8,7 +8,9 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
-  const list = await db.collection('scenery').get()
+  const list = await db.collection('picture').where({
+    describe: event.key
+  }).get()
 
   return {
     event,

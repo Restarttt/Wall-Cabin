@@ -1,5 +1,5 @@
 //search.js
-// const app = getApp()
+const app = getApp()
 
 Page({
   data: {
@@ -16,18 +16,34 @@ Page({
   // 删除关键字
   detele(e) {
     console.log(e)
-    this.data.word.splice(e.target.dataset.index, 1)
-    this.setData({
-      word: this.data.word
+    wx.cloud.callFunction({
+      name: 'search',
+      data: {
+        action: 'detelekey',
+        cancel: e.currentTarget.dataset.list
+      },
+      success: res => {
+        console.log(res)
+        this.data.word.splice(e.target.dataset.index)
+        this.setData({
+          word: this.data.word
+        })
+      },
+      fail: err => {
+        console.log(err)
+      }
     })
+
   },
   // 去壁纸页面
-  go() {
+  go(e) {
+    console.log(e)
+    const key = e.currentTarget.dataset.key
     wx.navigateTo({
-      url: '/pages/wallpaper/wallpaper',
+      url: '/pages/wallpaper/wallpaper?key=' + key,
     })
   },
-  go_detail(){
+  go_detail() {
     wx.navigateTo({
       url: '/pages/detail/detail',
     })
@@ -38,7 +54,7 @@ Page({
     wx.cloud.callFunction({
       name: 'search',
       data: {
-        action: 'getkeyword',
+        action: 'getkeypic',
         search_key: e.detail.value
       },
       success: res => {
@@ -56,19 +72,46 @@ Page({
         console.log(err)
       }
     })
+    wx.cloud.callFunction({
+      name: 'search',
+      data: {
+        action: 'getkeyword',
+        search_key: e.detail.value
+      },
+      success: res => {
+        // console.log(res)
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
   },
   // 请求关键字
   onLoad: function () {
     wx.cloud.callFunction({
       name: 'search',
       data: {
-        action:'getkeylist'      
+        action: 'getkeylist'
       },
       success: res => {
         // console.log(res)
         this.setData({
           hot_list: res.result.list,
-          word: res.result.word
+        })
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
+    wx.cloud.callFunction({
+      name: 'search',
+      data: {
+        action: 'getsearch'
+      },
+      success: res => {
+        console.log(res)
+        this.setData({
+          word: res.result.search.keyword
         })
       },
       fail: err => {
@@ -76,21 +119,21 @@ Page({
       }
     })
   },
-  // onShow: function () {
-  //   wx.cloud.callFunction({
-  //     name: 'search',
-  //     data: {
-  //       action: 'getkeyword',
-  //     },
-  //     success: res => {
-  //       console.log(res)
-  //       this.setData({
-  //         word: res.result
-  //       })
-  //     },
-  //     fail: err => {
-  //       console.log(err)
-  //     }
-  //   })
-  // }
+  onShow: function () {
+    wx.cloud.callFunction({
+      name: 'search',
+      data: {
+        action: 'getsearch'
+      },
+      success: res => {
+        // console.log(res)
+        this.setData({
+          word: res.result.search
+        })
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
+  }
 })

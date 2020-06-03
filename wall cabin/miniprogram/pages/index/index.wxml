@@ -28,7 +28,7 @@
 	<!-- 风景模块 -->
 	<view class="scenery" wx:for="{{scenery}}"  wx:key="index" >
 		<view class="scenery_top" >
-			<view class="back" bindtap="back">
+			<view class="back" bindtap="back" data-key='{{item.name}}' >
 				<image src="{{item.back}}" />
 				<text></text>
 			</view>
