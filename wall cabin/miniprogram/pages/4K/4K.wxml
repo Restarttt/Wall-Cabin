@@ -1,2 +1,9 @@
 <!--pages/4K/4K.wxml-->
-<text>正在开发中ing..</text>
+	<!-- 背景 -->
+	<view class="bg" >
+		<image src="../../images/home/bg.jpg" />
+		<view class="bg_title">
+			正在开发ing...
+		</view>
+	</view>
+

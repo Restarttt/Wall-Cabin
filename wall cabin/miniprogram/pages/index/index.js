@@ -19,23 +19,23 @@
       }, {
         img: "../../images/icon/sort.png",
         text: "排行",
-        url: '../rank/rank'
+        url: '../special/special'
       }, {
         img: "../../images/icon/face.png",
         text: "表情",
-        url: '../emoji/emoji'
+        url: '../special/special'
       }, {
         img: "../../images/icon/hot1.png",
         text: "热门",
-        url: '../hot/hot'
+        url: '../special/special'
       }, {
         img: "../../images/icon/random.png",
         text: "随机",
-        url: '../random/random'
+        url: '../special/special'
       }, {
         img: "../../images/icon/4K.png",
         text: "4K",
-        url: '../4K/4K'
+        url: '../special/special'
       }, {
         img: "../../images/icon/pc.png",
         text: "头像",
@@ -47,7 +47,18 @@
       }],
       scenery: []
     },
-    // 去搜索页面
+    // 滚动图的大图
+    big(e){
+      console.log(e)
+      const that = this
+      const fileid = e.target.dataset.img
+      const index =e.target.dataset.index
+      wx.previewImage({
+        current: fileid, // 当前显示图片的http链接
+        urls: [that.data.list[index].ID ]// 需要预览的图片http链接列表
+      })
+    },   
+ // 去搜索页面
     back(e) {
       console.log(e)
       const key = e.currentTarget.dataset.key

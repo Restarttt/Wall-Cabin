@@ -5,7 +5,7 @@
 		<swiper autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}" interval="{{interval}}" >
 			<swiper-item wx:for="{{list}}" wx:key="index">
 				<view class="logo">
-					<image src="{{item.ID}}" mode="{{mode}}" />
+					<image src="{{item.ID}}" mode="{{mode}}"  bindtap="big"  data-img='{{item.ID}}'  data-index='{{index}}' />
 				</view>
 			</swiper-item>
 		</swiper>

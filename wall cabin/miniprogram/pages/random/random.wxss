@@ -1,1 +1,22 @@
 /* pages/random/random.wxss */
+/* 背景 */
+.bg {
+  width: 100%;
+  top: 18%;
+  position: fixed;
+  font-size: 35rpx;
+}
+
+.bg image {
+  width: 77%;
+  height: 550rpx;
+  position: relative;
+  left: 14%;
+}
+
+.bg_title {
+  text-align: center;
+  margin-top: 38rpx;
+  color: #666;
+  font-size: 35rpx;
+}
