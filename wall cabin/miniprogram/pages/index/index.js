@@ -13,45 +13,38 @@
       mode: 'aspectFill',
       list: [],
       icon_list: [{
-          img: "../../images/icon/specially.png",
-          text: "专栏",
-          url: '../special/special'
-        },
-        //  {
-        //   img: "../../images/icon/sort.png",
-        //   text: "排行",
-        //   url: '../special/special'
-        // }, 
-        {
-          img: "../../images/icon/face.png",
-          text: "表情",
-          url: '../special/special'
-        },
-        // {
-        //   img: "../../images/icon/hot1.png",
-        //   text: "热门",
-        //   url: '../special/special'
-        // },
-        //  {
-        //   img: "../../images/icon/random.png",
-        //   text: "随机",
-        //   url: '../special/special'
-        // }, 
-        // {
-        //   img: "../../images/icon/4K.png",
-        //   text: "4K",
-        //   url: '../special/special'
-        // }, 
-        {
-          img: "../../images/icon/pc.png",
-          text: "头像",
-          url: '../head/head'
-        }, {
-          img: "../../images/icon/more.png",
-          text: "背景",
-          url: '../wechat/wechat'
-        }
-      ],
+        img: "../../images/icon/specially.png",
+        text: "专栏",
+        url: '../special/special'
+      }, {
+        img: "../../images/icon/sort.png",
+        text: "排行",
+        url: '../special/special'
+      }, {
+        img: "../../images/icon/face.png",
+        text: "表情",
+        url: '../special/special'
+      }, {
+        img: "../../images/icon/hot1.png",
+        text: "热门",
+        url: '../special/special'
+      }, {
+        img: "../../images/icon/random.png",
+        text: "随机",
+        url: '../special/special'
+      }, {
+        img: "../../images/icon/4K.png",
+        text: "4K",
+        url: '../special/special'
+      }, {
+        img: "../../images/icon/pc.png",
+        text: "头像",
+        url: '../head/head'
+      }, {
+        img: "../../images/icon/more.png",
+        text: "背景",
+        url: '../wechat/wechat'
+      }],
       scenery: []
     },
     // 滚动图的大图
