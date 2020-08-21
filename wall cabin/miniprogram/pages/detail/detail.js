@@ -40,13 +40,14 @@ Page({
   },
   // 分享
   onShareAppMessage: function (res) {
-    return {
-      title: "",
-      path: '../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg',
-      success: function (res) {
-        console.log('成功', res)
-      }
-    }
+    // console.log(1)
+    // return {
+    //   title: "",
+    //   path: '../../images/scenery/26569f5076666e483c9abd46e556ea6.jpg',
+    //   success: function (res) {
+    //     console.log('成功', res)
+    //   }
+    // }
   },
   // 点击保存到系统相册
   save() {
@@ -113,7 +114,7 @@ Page({
       fail: err => {
         console.loe(err)
       }
-    })  
+    })
   },
   // 下拉框
   report() {
@@ -153,6 +154,17 @@ Page({
     this.setData({
       service: false,
     })
+  },
+  // 页面相关事件处理函数--监听用户下拉动作
+  onPullDownRefresh: function () {
+    wx.showLoading({
+        title: '刷新中',
+      }),
+      setTimeout(function () {
+        console.log(1)
+        wx.hideLoading()
+        wx.stopPullDownRefresh()
+      }, 200)
   },
   // 请求详细信息和收藏状态
   onLoad: function (options) {
@@ -198,8 +210,8 @@ Page({
     })
   },
   /* 用户点击右上角分享
-  */
- onShareAppMessage: function () {
+   */
+  onShareAppMessage: function () {
 
- }
+  }
 })

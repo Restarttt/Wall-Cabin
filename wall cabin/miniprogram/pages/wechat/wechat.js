@@ -11,10 +11,10 @@ Page({
     console.log(e)
     const that = this
     const fileid = e.currentTarget.dataset.img
-    const index= e.currentTarget.dataset.index
+    const index = e.currentTarget.dataset.index
     wx.previewImage({
       current: fileid, // 当前显示图片的http链接
-      urls:[ that.data.list[index].file_id] // 需要预览的图片http链接列表
+      urls: [that.data.list[index].file_id] // 需要预览的图片http链接列表
     })
   },
   /**
@@ -35,6 +35,17 @@ Page({
       }
     })
 
+  },
+  // 页面相关事件处理函数--监听用户下拉动作
+  onPullDownRefresh: function () {
+    wx.showLoading({
+        title: '刷新中',
+      }),
+      setTimeout(function () {
+        console.log(1)
+        wx.hideLoading()
+        wx.stopPullDownRefresh()
+      }, 200)
   },
 
   /**

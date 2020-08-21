@@ -31,7 +31,7 @@ Page({
       }
     })
   },
-  
+
   // 请求数据列表
   onLoad: function (options) {
     wx.cloud.callFunction({
@@ -49,7 +49,18 @@ Page({
     })
     wx.showToast({
       title: '图片均可滑动',
-      duration:3000
+      duration: 3000
     })
+  },
+  // 页面相关事件处理函数--监听用户下拉动作
+  onPullDownRefresh: function () {
+    wx.showLoading({
+        title: '刷新中',
+      }),
+      setTimeout(function () {
+        console.log(1)
+        wx.hideLoading()
+        wx.stopPullDownRefresh()
+      }, 200)
   }
 })

@@ -120,6 +120,17 @@ Page({
 
 
   },
+   // 页面相关事件处理函数--监听用户下拉动作
+   onPullDownRefresh: function () {
+    wx.showLoading({
+        title: '刷新中',
+      }),
+      setTimeout(function () {
+        console.log(1)
+        wx.hideLoading()
+        wx.stopPullDownRefresh()
+      }, 200)
+  },
   // * 用户点击右上角分享
   // */
  onShareAppMessage: function () {}

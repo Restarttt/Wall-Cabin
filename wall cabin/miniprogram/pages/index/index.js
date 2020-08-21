@@ -13,52 +13,59 @@
       mode: 'aspectFill',
       list: [],
       icon_list: [{
-        img: "../../images/icon/specially.png",
-        text: "专栏",
-        url: '../special/special'
-      }, {
-        img: "../../images/icon/sort.png",
-        text: "排行",
-        url: '../special/special'
-      }, {
-        img: "../../images/icon/face.png",
-        text: "表情",
-        url: '../special/special'
-      }, {
-        img: "../../images/icon/hot1.png",
-        text: "热门",
-        url: '../special/special'
-      }, {
-        img: "../../images/icon/random.png",
-        text: "随机",
-        url: '../special/special'
-      }, {
-        img: "../../images/icon/4K.png",
-        text: "4K",
-        url: '../special/special'
-      }, {
-        img: "../../images/icon/pc.png",
-        text: "头像",
-        url: '../head/head'
-      }, {
-        img: "../../images/icon/more.png",
-        text: "背景",
-        url: '../wechat/wechat'
-      }],
+          img: "../../images/icon/specially.png",
+          text: "专栏",
+          url: '../special/special'
+        },
+        //  {
+        //   img: "../../images/icon/sort.png",
+        //   text: "排行",
+        //   url: '../special/special'
+        // }, 
+        {
+          img: "../../images/icon/face.png",
+          text: "表情",
+          url: '../special/special'
+        },
+        // {
+        //   img: "../../images/icon/hot1.png",
+        //   text: "热门",
+        //   url: '../special/special'
+        // },
+        //  {
+        //   img: "../../images/icon/random.png",
+        //   text: "随机",
+        //   url: '../special/special'
+        // }, 
+        // {
+        //   img: "../../images/icon/4K.png",
+        //   text: "4K",
+        //   url: '../special/special'
+        // }, 
+        {
+          img: "../../images/icon/pc.png",
+          text: "头像",
+          url: '../head/head'
+        }, {
+          img: "../../images/icon/more.png",
+          text: "背景",
+          url: '../wechat/wechat'
+        }
+      ],
       scenery: []
     },
     // 滚动图的大图
-    big(e){
+    big(e) {
       console.log(e)
       const that = this
       const fileid = e.target.dataset.img
-      const index =e.target.dataset.index
+      const index = e.target.dataset.index
       wx.previewImage({
         current: fileid, // 当前显示图片的http链接
-        urls: [that.data.list[index].ID ]// 需要预览的图片http链接列表
+        urls: [that.data.list[index].ID] // 需要预览的图片http链接列表
       })
-    },   
- // 去搜索页面
+    },
+    // 去搜索页面
     back(e) {
       console.log(e)
       const key = e.currentTarget.dataset.key
@@ -125,7 +132,17 @@
         title: 'loading',
       })
     },
-
+    // 页面相关事件处理函数--监听用户下拉动作
+    onPullDownRefresh: function () {
+      wx.showLoading({
+          title: '刷新中',
+        }),
+        setTimeout(function () {
+          console.log(1)
+          wx.hideLoading()
+          wx.stopPullDownRefresh()
+        }, 200)
+    },
     /**
      * 用户点击右上角分享
      */
